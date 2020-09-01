@@ -18,7 +18,7 @@ header{padding-top: 5%; box-sizing: border-box; width: 90%; margin: auto; displa
 
 .center-txt{position: absolute; top: 45%; left: 50%; text-align: center; transform: translate(-50%, -50%);}
 .center-txt h1{font-size: 35px; color: #555; }
-.center-txt b{font-family: 'Lemonada', cursive; top: 5px; font-size: 55px; position: relative; font-weight: bold; color: #315f94;}
+.center-txt b{text-shadow: 1px 1px 10px rgb(155, 143, 143); font-family: 'Lemonada', cursive; top: 5px; font-size: 55px; position: relative; font-weight: bold; color: #315f94;}
 .center-txt em{display: block; font-size: 20px; font-weight: 400; transform: skewX(20deg);}
 
 .scroll-alert{ position: absolute; top: 70%; width: 100%; height: 300px;   text-align: center;}
@@ -86,7 +86,7 @@ header{padding-top: 5%; box-sizing: border-box; width: 90%; margin: auto; displa
 
 /* about-page */
 .about-page{background: rgb(252, 252, 252); overflow: auto;}
-.about-page .about-title{color: #555;  margin-top: 70px; padding-left: 5%;}
+.about-page .about-title{color: #555;  margin-top: 70px; text-align: center;}
 .about-page .about-title h1{font-size: 50px; padding-bottom: 10px;}
 
 .about-page .info-box{width: 60%; margin: auto; margin-top: 80px; display: flex; justify-content: space-between; border-radius: 10px; background: #fff; padding: 50px; box-shadow: 1px 1px 5px 1px rgb(185, 185, 185);}
@@ -98,16 +98,19 @@ header{padding-top: 5%; box-sizing: border-box; width: 90%; margin: auto; displa
 .about-info .about-txt{color: #555; padding-top: 50px; text-align: center;}
 .about-info .about-txt h1{padding-bottom: 20px;}
 
-.about-page .info-box .skills-info{border: 1px solid #ccc; box-sizing: border-box; padding:0 50px; width: 50%; height: 100%; }
+.about-page .info-box .skills-info{width: 50%; height: 100%;}
+.skills-info i{margin-right: 15px; font-size: 20px;}
 
-.skills-title{margin-bottom: 20px;}
-.skills-title h1{font-size: 30px; font-weight: 600; color: #555; text-align: center;}
-.skills-title span{display: block; margin: auto; height: 3px; margin-top: 10px; width: 70px; background: #555;}
+.sk-title{margin-bottom: 20px; display: table;}
+.sk-title h1, .Ed-title h1{font-size: 25px; font-weight: bold; color: #555;}
+.Ed-title h1{margin-bottom: 20px;}
+.Ed-title{margin-bottom: 50px;}
 
-.skills-info .skill{padding-bottom: 23px;}
-.skills-info .skill h1{background: rgb(35, 57, 105); border-radius: 5px; padding: 2px 10px;  display: inline-block; margin-bottom: 10px; color: honeydew;}
-.skills-info .skill p{font-size: 14px;}
 
+.skill{width: 100%; background: #eee; align-items: center;  position: relative; display: flex; justify-content: space-between; margin-bottom: 15px;}
+.skill-fill{background:#315f94;}
+.skill-fill .tag{background: #1b242f; color: #fff; font-size: 14px; font-weight: bold; width: 100px; text-align: center; padding: 4px 0;}
+.skill span{display: block; font-size: 14px; margin-right: 10px;}
 
 /* contact-page */
 fieldset{border: none;}
@@ -123,12 +126,12 @@ fieldset{border: none;}
 
 .contact-page form{ width: 50%; display: block; box-sizing:border-box; padding:0 10px;}
 .contact-page input{transition: all 0.4s; display: block; width: 100%; padding: 10px; outline: none; border: 2px solid #aaa; box-sizing: border-box; margin-bottom: 10px; }
-.contact-page input:focus{border-color: #555; transform: scale(1.02);}
-.contact-page input:hover{border-color: #555; transform: scale(1.02);}
+.contact-page input:focus{border-color: #315f94; transform: scale(1.02);}
+.contact-page input:hover{border-color: #315f94; transform: scale(1.02);}
 
 .contact-page textarea{transition: all 0.4s; display: block;  width: 100%; height: 100px; box-sizing: border-box; border: 2px solid #aaa; padding: 10px; resize: none; margin-bottom: 20px; outline: none;}
-.contact-page textarea:focus{border-color: #555; transform: scale(1.02);}
-.contact-page textarea:hover{border-color: #555; transform: scale(1.02);}
+.contact-page textarea:focus{border-color: #315f94;; transform: scale(1.02);}
+.contact-page textarea:hover{border-color: #315f94; transform: scale(1.02);}
 
 button{position: relative; padding: 10px 20px; width: 100%; outline: none; overflow: hidden; background: #fff; border: 1px solid #000; float: right; color: #555; letter-spacing: 1px;}
 button:before{transform: translate3d(0,100%,0); transition: all 0.2s ease-in-out;  content: ''; position: absolute; width: 100%; height: 100%; background: #1b242f; top: 0; left: 0;}
