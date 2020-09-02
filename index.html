@@ -16,7 +16,10 @@
     </div>
     <section class="home-page">
         <header>
-            <div class="logo"><span>Shawn</span></div>
+            <div class="logo">
+                <h1>S</h1>
+                <span>Shawn</span>
+            </div>
             <div class="sub-txt"><span>Web Portfolio</span></div>
         </header>
 
@@ -25,10 +28,11 @@
                 <em>- Web Publisher-</em></h1>
         </div>
 
+        <!-- 스크롤 화살표 위아래 움직임 반복 구현할것 -->
         <div class="scroll-alert">
+            <h1>Scroll</h1>
             <div class="scroll-box">
-                <h1>View My Works</h1>
-                <i class="fas fa-angle-double-down"></i>
+                <i class="fas fa-long-arrow-alt-down"></i>
             </div>
         </div>
     </section>
@@ -50,9 +54,9 @@
 
         <div class="slide-contents">
 
-            <div class="slide-title">
-                <h1>Works</h1>
-                <span></span>
+            <div class="page-title">
+                <h1 style="color: #fff;">WORKS</h1>
+                <span style="background: #fff;"></span>
             </div>
 
             <div class="contents">
@@ -89,35 +93,67 @@
         </div>
     </section>
 
+    <section class="project-page" style="height: auto;">
+        <div class="center">
+            <div class="page-title">
+                <h1>PROJECT</h1>
+                <span></span>
+            </div>
+        </div>
+        
 
+        <div class="project-wrap">
+            <div class="pj-info">
+                <h1>Auchan</h1>
+                <p>Our team was assigned to build an online system where customers could place pre-orders for a streamlined in-store experience on a very tight schedule. A key challenge was to prevent overcrowding in Auchan stores during busy periods - before national holidays or special offers, for instance.</p>
+            </div>
+            
+            <div class="pj-img">
+               
+            </div>
+            <div class="pj-move-btn"></div>
+        </div>
+
+     
+
+
+    </section>
    
 
-    <section class="about-page">
-        <div class="about-title">
-            <div></div>
-            <h1>Who are you?</h1>
-            <p>저는 웹퍼블리셔 Shawn 입니다.</p>
+    <section class="about-page" style="height: auto;">
+        <div class="center">
+            <div class="page-title">
+                <h1>ABOUT</h1>
+                <span></span>
+            </div>
         </div>
+       
         <div class="info-box">
             <div class="about-info">
                 <div class="face-img">
-                    <img src="img/Asset 1.png" alt="">
+                    <img src="img/KakaoTalk_20200831_152031718.jpg" alt="">
                 </div>
                 <div class="about-txt">
-                    <h1>I'm Shawn ~ !</h1>
-                    <p>저는 UI 효과, 애니메이션 및 직관적이고 역동적 인 사용자 경험을 만드는 데 진지한 열정을 가지고 있습니다.
-                        항상 사용자 입장에서 생각하는 걸 좋아해서 계속 고민하며 더 나은 방향을 모색하는 편입니다.
+                    <h1>Shawn</h1><span>@손병현</span>
+                    <p>저는 웹 퍼블리셔 손병현 입니다.<br>
+                        <br>
+                        CSS와 JavaScript를 활용한 동적 모션을 좋아하고,
+                        컴포넌트 단위의 유지보수에 최적화된 마크업에 관심이 많습니다.
+                        <br><br>
+                        항상 사용자 입장에서 생각하는 걸 좋아해서 계속 고민하며 더 나은 방향을 모색하는 편이며
+                        항상 제자리에 있지 않고 발전해 나가는 웹 퍼블리셔가 되기 위해 노력하고 있습니다.
                     </p>
                 </div>
-                
             </div>
+            <div class="center-line">
 
+            </div>
             
             <div class="skills-info">
                 <div class="Ed-title">
                     <h1><i class="fas fa-caret-down"></i>Education</h1>
-                    <p>2012.03 - 2018.02 단국대학교 예술대학 미술학부 조소전공</p>
-                    <p>2010.07 - 2010.08 더조은컴퓨터아트학원 스마트웹디자인(UI/UX)(콘텐츠개발)</p>
+                    <p>단국대학교 예술대학 미술학부 조소전공</p>
+                    <p>더조은컴퓨터아트학원 스마트웹디자인(UI/UX)(콘텐츠개발)</p>
                 </div>
               
 
@@ -139,6 +175,12 @@
                         <div class="tag">CSS</div>
                     </div>
                     <span>90%</span>                   
+                </div>
+                <div class="skill">
+                    <div class="skill-fill" style="width: 60%;">
+                        <div class="tag">Jquery</div>
+                    </div>
+                    <span>60%</span>                   
                 </div>
                 <div class="skill">
                     <div class="skill-fill" style="width: 50%;">
@@ -167,39 +209,66 @@
 
 
     <section class="contact-page">
-        <div class="contact-title">
-            <h1>CONTACT</h1>
-            <span></span>
+        <svg preserveAspectRatio="none" viewBox="0 0 100 102" height="75" width="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" class="svgcolor-light">
+            <path d="M0 0 L50 100 L100 0 Z" fill="#fff" stroke="#fff"></path>
+          </svg>
+       
+        <div class="page-title" style="padding-top: 50px;">
+            <h1 style="color: #c4cfff;">CONTACT ME</h1>
+            <span style="background: #c4cfff;"></span>
         </div>
         <p class="contac-txt">함께 나누고 싶은 얘기가 있으시다면
-            언제든 연락주세요.<br>
-            <i class="fas fa-caret-down"></i>
+            언제든 연락주세요.
         </p>
-        <div class="contact-wrap">
+        <div class="center">
+            <div class="contact-wrap">
             
-            <form action="">
-                <fieldset>
-                    <input type="text" name="name" placeholder="Name">
-                    <input type="email" name="email" placeholder="email">
-                    <textarea type="text" name="message" placeholder="Your Message"></textarea>
-                    <button type="submit" class="button" id="submit" value="SUBMIT"><span>SUBMIT</span></button>
-                </fieldset>
-               
-            </form>
-
-            <div class="call-numbers">
-
-                <div>
-                    <h1>Open Kakao</h1>
-                    <a href="">
-                        <img src="img/KakaoTalk_20200901_150221944.png" alt="">
-                    </a>
+                <form id="contact" action="">
+                    <ul>
+                        <li class="half">
+                            <input type="text" name="name" placeholder="Name">
+                            <label class="input-label"></label>
+                        </li>
+    
+                        <li class="half" style="margin-left: 2%;">
+                            <input type="text" name="name" placeholder="Name">
+                            <label class="input-label"></label>
+                        </li>
+    
+                        <li style="clear: both;">
+                            <input type="email" name="email" placeholder="email">
+                            <label class="input-label"></label>
+                        </li>
+    
+                        <li>
+                            <input type="text" name="name" placeholder="Subject">
+                            <label class="input-label"></label>
+                        </li>
+    
+                        <li>
+                            <textarea type="text" name="message" placeholder="Your Message"></textarea>
+                            <label class="input-label"></label>
+                        </li>
+                    </ul>
+    
+                        <button type="submit" class="button" id="submit" value="SUBMIT"><span>SUBMIT</span></button>
+                   
+                </form>
+    
+                <div class="call-numbers">
+    
+                    <div>
+                        <h1>Open Kakao</h1>
+                        <a href="">
+                            <img src="img/KakaoTalk_20200901_150221944.png" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <h1>EMAIL</h1>
+                        <P>sbh3834@naver.com</P>
+                    </div>
+                   
                 </div>
-                <div>
-                    <h1>EMAIL</h1>
-                    <P>sbh3834@naver.com</P>
-                </div>
-               
             </div>
         </div>
         
