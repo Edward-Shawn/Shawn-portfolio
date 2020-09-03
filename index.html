@@ -7,13 +7,24 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Portfolio</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Lemonada:wght@300;400;500;600;700&display=swap');
+          @import url('https://fonts.googleapis.com/css2?family=Alata&family=PT+Sans+Caption&family=Roboto:wght@100;300;400;500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500&display=swap');
     </style>
 </head>
 <body>
     <div class="move-top">
         <span><i class="fas fa-angle-double-up"></i></span>
     </div>
+   
+
+    <ul class="gnb">
+        <li><a href="">Home</a></li>
+        <li><a href="">Works</a></li>
+        <li><a href="">Project</a></li>
+        <li><a href="">About</a></li>
+        <li class="go-contact"><a href="">Contact</a></li>
+    </ul>
+
     <section class="home-page">
         <header>
             <div class="logo">
@@ -25,7 +36,7 @@
 
         <div class="center-txt">
             <h1>Hi I'm <b>Shawn</b><br>
-                <em>- Web Publisher-</em></h1>
+                <em>Web Publisher / Freelancer</em></h1>
         </div>
 
         <!-- 스크롤 화살표 위아래 움직임 반복 구현할것 -->
@@ -40,23 +51,19 @@
 
     <!-- 상단 홈 페이지를 감추면서 들어오는 애니메이션 / 좌우 슬라이드 애니메이션 후 스크롤 내려가기 -->
     <section class="works-page">
-        <div class="view-change">
-            <div class="big-one"><i class="fas fa-stop"></i></div>
-            <div class="all-view"><i class="fas fa-th-large"></i></div>
-        </div>
-        <ul class="gnb">
-            <li><a href="">Home</a></li>
-            <li><a href="">Works</a></li>
-            <li><a href="">Project</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Contact</a></li>
-        </ul>
-
+       
+        
         <div class="slide-contents">
-
             <div class="page-title">
                 <h1 style="color: #fff;">WORKS</h1>
                 <span style="background: #fff;"></span>
+            </div>
+
+            <div class="center" style="position: relative; top: 20px;">
+                <div class="view-change">
+                    <div class="click one active"><i class="fas fa-stop"></i></div>
+                    <div class="click all"><i class="fas fa-th-large"></i></div>
+                </div>
             </div>
 
             <div class="contents">
@@ -93,12 +100,49 @@
         </div>
     </section>
 
+    <!-- all 버튼 클릭시 나올것 -->
+    <!-- <section class="works-page all-view">
+
+        
+        <div class="slide-contents">
+
+            <div class="page-title">
+                <h1 style="color: #fff;">WORKS</h1>
+                <span style="background: #fff;"></span>
+            </div>
+
+            <div class="center" style="position: relative; top: 20px;">
+                <div class="view-change">
+                    <div class="click one "><i class="fas fa-stop"></i></div>
+                    <div class="click all active"><i class="fas fa-th-large"></i></div>
+                </div>
+            </div>
+
+            <div class="contents all-view">
+                <div class="content"></div>
+                <div class="content"></div>
+                <div class="content"></div>
+                <div class="content"></div>
+                <div class="content"></div>
+                <div class="content"></div>
+                <div class="content"></div>
+                <div class="content"></div>
+                <div class="content"></div>
+                <div class="content"></div>
+            </div>
+            
+        </div>
+    </section> -->
+
+
+
     <section class="project-page" style="height: auto;">
         <div class="center">
             <div class="page-title">
                 <h1>PROJECT</h1>
                 <span></span>
             </div>
+            
         </div>
         
 
@@ -111,7 +155,10 @@
             <div class="pj-img">
                
             </div>
-            <div class="pj-move-btn"></div>
+            <div class="pj-move-btn">
+                <div class="pj prev"><i class="fas fa-angle-left"></i></div>
+                <div class="pj next"><i class="fas fa-angle-right"></i></div>
+            </div>
         </div>
 
      
@@ -214,8 +261,8 @@
           </svg>
        
         <div class="page-title" style="padding-top: 50px;">
-            <h1 style="color: #c4cfff;">CONTACT ME</h1>
-            <span style="background: #c4cfff;"></span>
+            <h1 style="color: #fff;">CONTACT ME</h1>
+            <span style="background: #fff;"></span>
         </div>
         <p class="contac-txt">함께 나누고 싶은 얘기가 있으시다면
             언제든 연락주세요.
@@ -251,7 +298,7 @@
                         </li>
                     </ul>
     
-                        <button type="submit" class="button" id="submit" value="SUBMIT"><span>SUBMIT</span></button>
+                        <button type="submit" class="submit-button" id="submit" value="SUBMIT"><span>SUBMIT</span></button>
                    
                 </form>
     
