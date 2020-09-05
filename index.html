@@ -51,54 +51,88 @@
 
     <!-- 상단 홈 페이지를 감추면서 들어오는 애니메이션 / 좌우 슬라이드 애니메이션 후 스크롤 내려가기 -->
     <section class="works-page">
-       
-        
-        <div class="slide-contents">
-            <div class="page-title">
-                <h1 style="color: #fff;">WORKS</h1>
-                <span style="background: #fff;"></span>
-            </div>
+        <div class="works-background"></div>
 
-            <div class="center" style="position: relative; top: 20px;">
-                <div class="view-change">
-                    <div class="click one active"><i class="fas fa-stop"></i></div>
-                    <div class="click all"><i class="fas fa-th-large"></i></div>
-                </div>
-            </div>
 
-            <div class="contents">
-                <div class="slide-wrap">
-                    <div class="page">
-                        <div class="page-img">
-                            <img src="img/K-002.jpg" alt="">
-                            <div class="responsive">
-                                <div class="tablet">
-                                    <img src="img/K-019.jpg" alt="">
-                                </div>
-                                <div class="mobile">
-                                    <img src="img/K-003.jpg" alt="">
+        <div class="page-title">
+            <h1 style="color: #fff;">WORKS</h1>
+            <span style="background: #fff;"></span>
+        </div>
+
+        <div class="slide-wrap all">
+            <!-- <div class="move-btn prev"><i class="fas fa-angle-left"></i></div> -->
+
+                <!-- 본 슬라이드 -->
+                <div class="slide-box">
+
+                    <div class="view-change-wrap">
+                        <div class="view-change-box">
+                            <div class="click one active"><i class="fas fa-stop"></i></div>
+                            <div class="click all "><i class="fas fa-th-large"></i></div>
+                        </div>
+                    </div>
+
+                    <div class="pages">
+                        <div class="pages-wrap">
+                            <div class="page-img">
+                                <img src="img/K-002.jpg" alt="">
+                                <div class="responsive">
+                                    <div class="tablet">
+                                        <img src="img/K-019.jpg" alt="">
+                                    </div>
+                                    <div class="mobile">
+                                        <img src="img/K-003.jpg" alt="">
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="page-txt">
-                            <h1><b>01.</b> Omega Web site</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
-                            Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, </p>
-                            <a href="" class="view-link"><span>View Web Site</span></a>
-                            <a href="" class="view-link"><span>View Repos</span></a>
+                            <div class="page-txt">
+                                <h1><b>01.</b> Omega Web site</h1>
+                                <p>responsive</p>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+                                Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, </p>
+                            
+                                <div class="lan">
+                                    <span>HTML</span><span>CSS</span><span>JS</span>
+                                </div>
+                                
+                                <a href="" class="view-link"><span>View Web Site</span></a>
+                                <a href="" class="view-link"><span>View Repos</span></a>
+                            </div>
                         </div>
-
                     </div>
+
+                    <div class="view-all" >
+
+                        <div class="button-group filter-button-group">
+                            <button id="showAll" data-filter="*">show all</button>
+                            <button data-filter=".one">one</button>
+                            <button data-filter=".two">two</button>
+                            <button data-filter=".three">three</button>
+                        </div>
+                
+                            
+                        <div class="page-box grid">
+                            <div class="page grid-item one">1</div>
+                            <div class="page grid-item two">2</div>
+                            <div class="page grid-item three">3</div>
+                            <div class="page grid-item one">1</div>
+                            <div class="page grid-item two">2</div>
+                            <div class="page grid-item three">3</div>
+                            <div class="page grid-item one">1</div>
+                            <div class="page grid-item two">2</div>
+                            <div class="page grid-item three">3</div>
+                        </div>
+                    </div> 
+
                 </div>
 
+                <!-- <div class="move-btn next"><i class="fas fa-angle-right"></i></div> -->
 
-                <div class="move-btn prev"><i class="fas fa-angle-left"></i></div>
-                <div class="move-btn next"><i class="fas fa-angle-right"></i></div>
-            </div>
-            
+              
         </div>
-    </section>
+
+</section>
 
     <!-- all 버튼 클릭시 나올것 -->
     <!-- <section class="works-page all-view">
@@ -199,7 +233,7 @@
             <div class="skills-info">
                 <div class="Ed-title">
                     <h1><i class="fas fa-caret-down"></i>Education</h1>
-                    <p>단국대학교 예술대학 미술학부 조소전공</p>
+                    <p>단국대학교 예술대학 미술학부</p>
                     <p>더조은컴퓨터아트학원 스마트웹디자인(UI/UX)(콘텐츠개발)</p>
                 </div>
               
@@ -324,8 +358,9 @@
              본 사이트는 상업적 목적이 아닌 개인 포트폴리오 사이트로 제작되었습니다.</p>
         </footer>
     </section>
-
-   
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
     <div class="footer-bt"></div>
     <!-- <script src="js/custom.js"></script> -->
 </body>

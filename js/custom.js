@@ -1,22 +1,40 @@
 $(window).ready(function(){
 
+    $(".pages").hide();
+    $(".view-all").hide();
+
     $(".click").click(function(){
         $(".click").removeClass("active");
         $(this).addClass("active");
 
         if($(".click.one").hasClass("active")){
-            $(".view-all").css('display','none')
-            $(".pages").css('display','block')
+            $(".view-all").hide();
+            $(".pages").show();
         }
 
         if($(".click.all").hasClass("active")){
-            $(".pages").css('display','none')
-            $(".view-all").css('display','block')
+            $(".pages").hide();
+            $(".view-all").show();
+      
+
         }
+
+       
     })
 
     
+    
+    $(".click.one").click(function(){
+        $(".works-background").css('height','50%')
+    })
 
+    $(".click.all").click(function(){
+        $(".works-background").css('height','60%')
+    })
+
+
+    $(".click").eq(1).trigger("click");
+    
 
 
 
@@ -24,7 +42,7 @@ $(window).ready(function(){
         // options
         itemSelector: '.grid-item',
         layoutMode: 'fitRows'
-      });
+    });
 
 
     var $grid = $('.grid').isotope({
@@ -37,12 +55,9 @@ $(window).ready(function(){
     });
 
 
-
     // filter .metal items
     $grid.isotope({ filter: '.one' });
-
     $grid.isotope({ filter: '.two' });
-
     $grid.isotope({ filter: '.three' });
 
     // show all items
