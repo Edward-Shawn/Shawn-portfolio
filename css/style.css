@@ -57,6 +57,8 @@ header{padding-top: 5%; box-sizing: border-box; width: 90%; margin: auto; displa
 
 /* works-page */
 
+
+
 .pages, .view-all{margin-bottom: 100px;}
 .view-all{transition: all 0.4s;  position: relative; animation-name: pageanimation; animation-duration: .8s;}
 .pages{position: relative; top: 0; animation-name: pageanimation; animation-duration: .8s;}
@@ -123,8 +125,10 @@ header{padding-top: 5%; box-sizing: border-box; width: 90%; margin: auto; displa
 
 
 /* 카테고리 나누기 */
-.button-group{_border: 1px solid greenyellow; width: 100%; text-align: center;}
-.button-group button{color: #000; margin: auto; background: #fff; border: 1px solid #777; font-size: 20px; padding: 10px 20px; margin: 10px 10px;}
+.button-group{_border: 1px solid greenyellow; margin-bottom: 10px; width: 100%; text-align: center;}
+.button-group button{ margin: auto; background: transparent; border: none;color: #fff; font-size: 20px; outline: none; padding: 10px 20px; margin: 10px 10px;}
+.button-group button.active{background: #3f60fa; color: #fff;}
+
 
 /* 타이틀 */
 .works-pages{height: auto; overflow: hidden; padding-bottom: 100px; }
@@ -135,19 +139,18 @@ header{padding-top: 5%; box-sizing: border-box; width: 90%; margin: auto; displa
 /* 전체 뷰 적용 코드 */
 
 .slide-wrap.all{margin: auto; _border: 1px solid greenyellow; position: relative; z-index: 99;}
-.slide-wrap.all .slide-box{border: 1px solid rgb(255, 47, 47); max-width: 1000px; width: 100%; margin: auto;}
+.slide-wrap.all .slide-box{_border: 1px solid rgb(255, 47, 47); max-width: 1000px; width: 100%; margin: auto;}
 .slide-wrap.all .page-box{box-sizing: border-box; overflow: hidden; _box-shadow: 1px 1px 10px 1px #999; width: 100%; height: 100%;}
 .slide-wrap.all .page-box .page{width: 33.33%; text-align: center; padding-top: 120px; float: left; height: 250px; border: 1px solid #777;}
-.grid-item.one{background: cornflowerblue;}
-.grid-item.two{background: rgb(179, 197, 230);}
-.grid-item.three{background: rgb(202, 169, 221);}
+.grid-item.one{background: rgb(190, 195, 204);}
+.grid-item.two{background: rgb(187, 189, 192);}
+.grid-item.three{background: rgb(170, 169, 172);}
 
 
 
 
 /* project-page */
 
-.project-page{}
 
 .project-wrap{position: relative; display: flex; width:80%; margin: auto;  height: auto; box-sizing: border-box; margin-top: 150px;}
 .pj-img{width: 55%; height: 600px;  background: #ccc;  position: relative; margin-top: -135px; margin-left: -100px;}

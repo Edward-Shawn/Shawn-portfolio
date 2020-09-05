@@ -105,10 +105,10 @@
                     <div class="view-all" >
 
                         <div class="button-group filter-button-group">
-                            <button id="showAll" data-filter="*">show all</button>
-                            <button data-filter=".one">one</button>
-                            <button data-filter=".two">two</button>
-                            <button data-filter=".three">three</button>
+                            <button class="active" data-filter="*">ALL</button>
+                            <button data-filter=".one">RESPONSIVE</button>
+                            <button data-filter=".two">PC</button>
+                            <button data-filter=".three">MOBILE</button>
                         </div>
                 
                             
@@ -362,6 +362,34 @@
     <script src="js/custom.js"></script>
     <script src="js/isotope.pkgd.min.js"></script>
     <div class="footer-bt"></div>
-    <!-- <script src="js/custom.js"></script> -->
+    <script>
+        $(document).ready(function(){
+            $('.grid').isotope({
+                // options
+                itemSelector: '.grid-item',
+                layoutMode: 'fitRows'
+                });
+
+
+                var $grid = $('.grid').isotope({
+                    // options
+                });
+                // filter items on button click
+                $('.filter-button-group').on( 'click', 'button', function() {
+                    var filterValue = $(this).attr('data-filter');
+                    $grid.isotope({ filter: filterValue });
+                });
+
+
+                // filter .metal items
+                $grid.isotope({ filter: '.one' });
+                $grid.isotope({ filter: '.two' });
+                $grid.isotope({ filter: '.three' });
+
+                // show all items
+                $grid.isotope({ filter: '*' });
+            })
+    </script>
+    
 </body>
 </html>

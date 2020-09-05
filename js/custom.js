@@ -38,28 +38,12 @@ $(window).ready(function(){
 
 
 
-    $('.grid').isotope({
-        // options
-        itemSelector: '.grid-item',
-        layoutMode: 'fitRows'
-    });
+    $(".button-group button").click(function(){
+        $("button").removeClass("active");
+        $(this).addClass("active");
+    })
 
 
-    var $grid = $('.grid').isotope({
-        // options
-    });
-    // filter items on button click
-    $('.filter-button-group').on( 'click', 'button', function() {
-        var filterValue = $(this).attr('data-filter');
-        $grid.isotope({ filter: filterValue });
-    });
 
-
-    // filter .metal items
-    $grid.isotope({ filter: '.one' });
-    $grid.isotope({ filter: '.two' });
-    $grid.isotope({ filter: '.three' });
-
-    // show all items
-    $grid.isotope({ filter: '*' });
+   
 })
