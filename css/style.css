@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=PT+Sans+Caption&family=Roboto:wght@100;300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500&display=swap');
+
 *{margin: 0; padding: 0; box-sizing: border-box; font-family: 'Jost', sans-serif;}
 
 ul, ol{list-style: none;}
@@ -11,14 +14,16 @@ section{width: 100%; height: 100vh;}
 
 .center .page-title{float: left;}
 
-.gnb{position: fixed; transition: all 0.2s ease-in-out; _display: none; z-index: 999; top: 0;  width: 100%; height: auto; text-align: center; background:none;}
+/* header style */
+header{ position: fixed; z-index: 999; top: 0;  width: 100%; height: auto; background:transparent; transition: all 0.2s ease-in-out;}
+.gnb{position: relative; width: auto; display: table; margin: auto;  }
 .gnb li{display: inline-block; padding: 5px 0;}
 .gnb li a{color: #777; display: block; padding: 5px 50px; font-weight: 400; font-size: 20px;}
 .gnb span{position:absolute; width:100%; height:2px; background:#777; left:0; bottom:0;}
 
-.gnb.on{background: #1b242f; padding: 10px; box-shadow: 1px 1px 10px 1px #000;}
-.gnb.on li a{color: #fff;}
-.gnb.on span{position:absolute; width:100%; height:2px; background:#fff; left:0; bottom:0;}
+header.on{background: #1b242f; padding: 10px; box-shadow: 1px 1px 10px 1px #000;}
+header.on li a{color: #fff;}
+header.on span{position:absolute; width:100%; height:2px; background:#fff; left:0; bottom:0;}
 
 .go-contact a{background: #3f60fa; color: #fff !important;}
 
@@ -33,7 +38,7 @@ section{width: 100%; height: 100vh;}
 /* home-page */
 .home-page{background: none; background: url(../img/Savin-NY-Website-Background-Web.jpg);}
 
-header{padding-top: 5%; box-sizing: border-box; width: 90%; margin: auto; display: flex; align-items: center; justify-content: space-between;}
+.logo-text{padding-top: 5%; box-sizing: border-box; width: 90%; margin: auto; display: flex; align-items: center; justify-content: space-between;}
 .sub-txt{color: #555; font-weight: bold;}
 .logo{ border: 2px solid gray; color: #555; text-align: center;}
 .logo h1{margin-bottom: -10px; font-size: 30px; color: #3f60fa; text-shadow: 4px 1px 1px rgb(185, 169, 169);}
@@ -129,8 +134,17 @@ header{padding-top: 5%; box-sizing: border-box; width: 90%; margin: auto; displa
 /* 카테고리 나누기 */
 .button-group{_border: 1px solid greenyellow; margin-bottom: 10px; width: 100%; text-align: center;}
 .button-group button{ margin: auto; background: transparent; border: none;color: #fff; font-size: 20px; outline: none; padding: 10px 20px; margin: 10px 10px;}
-.button-group button.active{background: #3f60fa; color: #fff;}
-
+.button-group button.active{background: #3f60fa; color: #fff; animation-name: btn-active; animation-duration: .3s;}
+@keyframes btn-active{
+  0% {
+    transform: scale(1.2);
+  
+  }
+100% {
+    transform: scale(1);
+   
+  }
+}
 
 /* 타이틀 */
 .works-pages{height: auto; overflow: hidden; padding-bottom: 100px; }
@@ -188,39 +202,51 @@ header{padding-top: 5%; box-sizing: border-box; width: 90%; margin: auto; displa
 .pj{margin: auto;}
 .pj:hover i{transform: scale(1.5);}
 
+
+
+
 /* about-page */
 .center-line{width: 1px; height: 500px; background: #ccc;}
 
 .about-page{background: #fff; overflow: auto;}
 
-.about-page .info-box{width: 70%; border: 1px solid red; position: relative; margin: auto; height: auto; margin-top: 80px; margin-bottom: 100px; display: flex; background: #fff;}
-.about-page .info-box .about-info{width: 50%; height: 100%;  box-sizing: border-box; padding-right: 50px; padding-left: 180px; padding-top: 20px;}
+.about-page .info-box{width: 80%; max-width: 1200px; border: 1px solid red; position: relative; margin: auto; height: auto; margin-top: 80px; margin-bottom: 100px; _display: flex; background: #fff;}
+.about-page .info-box .about-info{width: 100%; height: 100%; display: flex; justify-content: space-between; box-sizing: border-box; padding-top: 20px;}
 
-.about-info .face-img{width: 50%; height: auto; _margin: auto; position: relative;}
-.face-img::before{content: ''; position: absolute; width: 100%; height: 100%; box-sizing: border-box; top: -5px; right: 8px; border: 3px solid #3f60fa;;}
+/* about-topTxt */
+.about-topTxt{text-align: center; border: 1px solid #ccc;  margin-bottom: 100px;}
+.about-topTxt p{font-size: 20px; color: #777;}
+
+/* about face */
+.about-face{width: 20%; border: 1px solid rgb(33, 189, 216);}
+.about-face .face-img{width: 100%; _margin: auto; position: relative; display: table;}
+.face-img:before{content: ''; position: absolute; width: 100%; height: 100%; box-sizing: border-box; top: -5px; right: 8px; border: 3px solid #3f60fa;;}
 .face-img img{width: 100%;  display: block;}
 
-.about-info .about-txt{color: #555; padding-top: 50px; }
-.about-info .about-txt h1{padding-bottom: 20px; font-size: 30px; margin-right: 5px; display: inline-block;}
-.about-info .about-txt span{font-weight: bold; color: #777;}
-.about-info .about-txt p{font-size: 14px;}
+.about-name{margin-bottom: 40px; margin-top: 10px; color: #555; }
+.about-name p{color: #3f60fa; font-size: 15px; margin-top: -30px; font-weight: 500;}
+.about-name h1{padding-bottom: 20px; font-size: 50px; margin-right: 5px; display: inline-block;}
+.about-name span{font-weight: bold; color: #555;}
 
 
-.about-page .info-box .skills-info{width: 45%; height: 100%; padding-left: 50px;}
-.skills-info i{margin-right: 15px; font-size: 20px;}
+/* about info txt */
+.about-info .about-txt{color: #555; width: 50%; border: 1px solid red;}
+.about-info .about-txt p{font-size: 20px;}
 
-.sk-title{margin-bottom: 20px; display: table;}
-.sk-title h1, .Ed-title h1{font-size: 40px; font-weight:500; color: #555;}
+
+.Ed-title{margin-bottom: 50px; width: 50%;}
 .Ed-title h1{margin-bottom: 20px;}
-.Ed-title{margin-bottom: 50px;}
-
 .Ed-title p{margin-bottom: 10px; font-size: 14px; color: #777;}
 
 
-.skill{width: 100%; background: #eee; align-items: center;  position: relative; display: flex; justify-content: space-between; margin-bottom: 10px;}
-.skill-fill{background:#849aff;;}
-.skill-fill .tag{background: #3f60fa;; color: #fff; font-size: 14px; font-weight: bold; width: 100px; text-align: center; padding: 5px 0;}
-.skill span{display: block; font-size: 14px; margin-right: 10px;}
+/* about skills-info */
+.skills-info{border: 1px solid blue; width: 100%; display: flex; justify-content: space-between; box-sizing: border-box; padding: 0 50px; margin-top: 100px; height: auto;}
+.skills-info .skill{padding: 10px; background: #3f60fa;}
+
+.sk-title{margin-bottom: 20px; width: auto;}
+.sk-title h1, .Ed-title h1{font-size: 40px; font-weight:500; color: #555;}
+
+
 
 /* contact-page */
 

@@ -19,7 +19,7 @@ $(document).ready(function(){
           $("html,body").animate({ scrollTop: pagePos }, 300);
         });
     
-        $(".gnb li").eq(0).trigger("click");
+        // $(".gnb li").eq(0).trigger("click");
       }
     
       activateNav();

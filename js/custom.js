@@ -68,12 +68,12 @@ $(window).ready(function(){
 
         if (st > lastScrollTop && st > navbarHeight){
             // 스크롤 올릴때 (높게)
-            $('.gnb').addClass('on');
+            $('header').addClass('on');
             
         }else{
             if(lastScrollTop && st < navbarHeight) {
             // 스크롤 내릴때 (낮게)
-            $('.gnb').removeClass('on');
+            $('header').removeClass('on');
             }
 
         }
