@@ -88,9 +88,9 @@ $(window).ready(function(){
 
     $(window).scroll(function() {
         if ($(this).scrollTop() > 500) {
-            $('.move-top').fadeIn(200);
+            $('.move-top').addClass('on');
         } else {
-            $('.move-top').fadeOut(200);
+            $('.move-top').removeClass('on');
         }
     });
     
