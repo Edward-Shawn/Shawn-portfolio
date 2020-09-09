@@ -31,9 +31,14 @@ header.on span{position:absolute; width:100%; height:2px; background:#fff; left:
 
 
 /* move top */
-.move-top{transition: all 0.2s ease-in; position: fixed; top: 90%; right: 10%;background: #3f60fa;; z-index: 999;}
-.move-top span i{font-size: 30px; padding: 10px; color: #eee;}
-.move-top:hover{background: #315f94; transform: scale(1.1);}
+.move-top{animation-name: move-top; animation-duration: .5s; transition: all .5s; border-radius: 10px; position: fixed; display: none;  top: 90%; right: 10%;background: #3f60fa; z-index: 999;}
+.move-top span i{font-size: 30px; padding: 10px 15px;  color: #eee;}
+.move-top:hover{background: #3fa0fa; transform: scale(1.2); }
+@keyframes move-top{
+  0%{transform: scale(1.2);}
+  100%{transform: scale(1);}
+}
+
 
 /* home-page */
 .home-page{background: none; background: url(../img/Savin-NY-Website-Background-Web.jpg);}
@@ -49,13 +54,18 @@ header.on span{position:absolute; width:100%; height:2px; background:#fff; left:
 .center-txt b{text-shadow: 5px 3px 1px #ccc; top: 5px; font-size: 120px; position: relative; font-weight: bold; color: #3f60fa;}
 .center-txt em{ color: #777; font-size: 15px; font-weight: 500; float: right; font-style: normal;}
 
-.scroll-alert{position: absolute; left: 50%; transform: translateX(-50%); top: 80%; width: auto; height: auto; text-align: center;}
+.scroll-alert{animation-name: scrollDown; animation-duration: 2s; animation-iteration-count:infinite; position: absolute; left: 50%; transform: translateX(-50%); top: 80%; width: auto; height: auto; text-align: center;}
 .scroll-alert h1{transform: rotate(-90deg); padding-bottom: 5px; margin: auto; font-size: 14px; color: #555; font-weight: bold;}
 
 .scroll-alert i{font-size: 15px; display:block; color: #555; padding-top: 50px;}
 .scroll-alert .scroll-box{position: relative; transition: all 0.4s;}
 
 
+@keyframes scrollDown{
+  0%{top: 80%}
+  50%{top: 85%;}
+  100%{top: 80%}
+}
 
 
 
@@ -185,7 +195,7 @@ header.on span{position:absolute; width:100%; height:2px; background:#fff; left:
 
 
 .pj-info{width: 50%; padding:50px 50px ; box-sizing: border-box; height: auto; z-index: 1; background: #fff; box-shadow: 1px 1px 10px #555;}
-.pj-info .pj-info-update{border: 1px solid red; position: relative; overflow: hidden;}
+.pj-info .pj-info-update{border: 1px solid #eee; position: relative; overflow: hidden;}
 .pj-info-wrap{display: flex; width: 100%; overflow: hidden;}
 .pj-content{ flex-shrink: 0; width: 100%; transform: translateY(0);}
 
@@ -210,42 +220,51 @@ header.on span{position:absolute; width:100%; height:2px; background:#fff; left:
 
 .about-page{background: #fff; overflow: auto;}
 
-.about-page .info-box{width: 80%; max-width: 1200px; border: 1px solid red; position: relative; margin: auto; height: auto; margin-top: 80px; margin-bottom: 100px; _display: flex; background: #fff;}
+.about-page .info-box{width: 100%; max-width: 1200px; _border: 1px solid #eee; position: relative; margin: auto; height: auto; margin-top: 80px; background: #fff;}
 .about-page .info-box .about-info{width: 100%; height: 100%; display: flex; justify-content: space-between; box-sizing: border-box; padding-top: 20px;}
 
 /* about-topTxt */
-.about-topTxt{text-align: center; border: 1px solid #ccc;  margin-bottom: 100px;}
-.about-topTxt p{font-size: 20px; color: #777;}
+.about-topTxt{ margin-bottom: 100px;}
+.about-topTxt p{font-size: 25px; font-weight: 500; color: #555;}
+.about-topTxt b{font-size: 50px; color: #3f60fa; text-shadow: 2px 1px 1px #ccc;}
 
 /* about face */
-.about-face{width: 20%; border: 1px solid rgb(33, 189, 216);}
-.about-face .face-img{width: 100%; _margin: auto; position: relative; display: table;}
+.about-face{width: 20%; _border: 1px solid #eee;}
+.about-face .face-img{width: 100%; margin-left: 5px; position: relative; display: table;}
 .face-img:before{content: ''; position: absolute; width: 100%; height: 100%; box-sizing: border-box; top: -5px; right: 8px; border: 3px solid #3f60fa;;}
 .face-img img{width: 100%;  display: block;}
 
-.about-name{margin-bottom: 40px; margin-top: 10px; color: #555; }
-.about-name p{color: #3f60fa; font-size: 15px; margin-top: -30px; font-weight: 500;}
-.about-name h1{padding-bottom: 20px; font-size: 50px; margin-right: 5px; display: inline-block;}
+.about-name{margin-bottom: 20px; margin-top: -10px; color: #555; }
+.about-name h1{padding-bottom: 20px; font-size: 30px; margin-right: 5px; font-weight: 400; display: inline-block;}
 .about-name span{font-weight: bold; color: #555;}
+.about-name p{color: #3f60fa; font-size: 15px; margin-top: -30px; font-weight: 500;}
+
 
 
 /* about info txt */
-.about-info .about-txt{color: #555; width: 50%; border: 1px solid red;}
-.about-info .about-txt p{font-size: 20px;}
+.about-info .about-txt{color: #777; box-sizing: border-box;  width: 40%; _border: 1px solid #eee;}
+.about-info .about-txt p{font-size: 15px;}
 
 
-.Ed-title{margin-bottom: 50px; width: 50%;}
-.Ed-title h1{margin-bottom: 20px;}
+.Ed-title{margin-bottom: 50px; display: table; padding-left: 20px; width: auto; border-left: 7px solid #aaa;}
+.Ed-title h1{margin-bottom: 20px; font-size: 30px; color: #555;}
 .Ed-title p{margin-bottom: 10px; font-size: 14px; color: #777;}
 
 
 /* about skills-info */
-.skills-info{border: 1px solid blue; width: 100%; display: flex; justify-content: space-between; box-sizing: border-box; padding: 0 50px; margin-top: 100px; height: auto;}
-.skills-info .skill{padding: 10px; background: #3f60fa;}
+.skills-info{ width: 100%; max-width: 1200px; margin: auto; box-sizing: border-box;  height: auto; margin-bottom: 150px;}
+.sk-title{font-size: 40px; font-weight:600; color: #555; width: auto; margin-top: 80px; margin-bottom: 50px;}
 
-.sk-title{margin-bottom: 20px; width: auto;}
-.sk-title h1, .Ed-title h1{font-size: 40px; font-weight:500; color: #555;}
+.skill-box{width: 100%; background: #fff; height: auto; display: flex; margin-bottom: 50px; justify-content: space-between; }
+.skill-icon{width: 30%; position: relative;}
 
+.icon-txt{display: flex; align-items: center; justify-content: space-between;}
+.icon-txt h1{text-transform: uppercase; font-weight: 400; font-size: 20px; margin-bottom: 10px; color: #555; display: inline-block; }
+.icon-txt span{font-size: 15px; font-weight: 500; color: #999;}
+
+
+.icon-fill{border-radius: 20px; overflow: hidden; height: 10px; display: flex; justify-content: space-between; background: #eee;}
+.icon-fill .fill{background: #3f60fa;}
 
 
 /* contact-page */
@@ -253,7 +272,7 @@ header.on span{position:absolute; width:100%; height:2px; background:#fff; left:
 .contact-page{background: #1b242f; position: relative;}
 
 
-.contac-txt{padding: 40px 0; text-align: center; font-size: 15px; color: #53e5ff; }
+.contac-txt{padding: 40px 0; text-align: center; font-size: 15px; color: #eee; }
 .contac-txt i{padding-top: 20px;}
 
 .contact-wrap{width: 100%; margin: auto; margin-top: 50px; display: flex; position: relative; _box-shadow: 1px 1px 5px 1px rgb(185, 185, 185); _background: #fff;}
@@ -263,7 +282,7 @@ form ul li.half{width: 49%; float: left;}
 form ul li{position: relative; padding: 0; margin: 0; list-style: none; margin-bottom: 10px; overflow: hidden; display: block;}
 
 .input-label:before{content: ''; position: absolute;  bottom: 0;  left: 0;  width: 100%;  height: 1px;}
-.input-label:after{transform: translate3d(-100%,0,0); border-bottom: 2px solid #53e5ff;  content: '';  position: absolute; bottom: 0; left: 0%; width: 100%; height: 1px; transition: all 0.4s;}
+.input-label:after{transform: translate3d(-100%,0,0); border-bottom: 2px solid #3fa0fa;  content: '';  position: absolute; bottom: 0; left: 0%; width: 100%; height: 1px; transition: all 0.4s;}
 
 input:focus+.input-label:after{transform:translate3d(0,0,0)}
 input:hover+.input-label:after{transform:translate3d(0,0,0)}
@@ -277,19 +296,19 @@ input{background: #2d363f; color: #8d8d8d; font-family: sans-serif; transition: 
 textarea{position: relative; transition: all 0.4s; color: #8d8d8d; background: #2d363f; font-size: 20px; font-family: sans-serif; display: block;  width: 100%; height: 200px; box-sizing: border-box; border: none; padding: 10px; resize: none; outline: none;}
 
 
-.submit-button{position: relative; padding: 10px 50px; outline: none; overflow: hidden; background: #1b242f; border: 1px solid #53e5ff; float: right; transition: all 0.2s ease-in-out;}
-.submit-button:before{transform: translate3d(0,100%,0); transition: all 0.2s ease-in-out;  content: ''; position: absolute; width: 100%; height: 100%; border: 1px solid #53e5ff; background: #53e5ff; top: 0; left: 0;}
+.submit-button{position: relative; padding: 10px 50px; outline: none; overflow: hidden; background: #3f60fa; border: 1px solid #3f60fa; float: right; transition: all 0.2s ease-in-out;}
+.submit-button:before{transform: translate3d(0,100%,0); transition: all 0.2s ease-in-out;  content: ''; position: absolute; width: 100%; height: 100%; background: #1b242f; top: 0; left: 0;}
 .submit-button:hover::before{transform: none;}
-.submit-button span{color: #53e5ff; letter-spacing: 1px; font-size: 20px; font-weight: 400; position: relative; transition: all 0.2s ease-in-out;}
-.submit-button:hover span{color: #1b242f;}
-.submit-button:hover{border: 1px solid transparent;}
+.submit-button span{color: #1b242f; letter-spacing: 1px; font-size: 20px; font-weight: 400; position: relative; transition: all 0.2s ease-in-out;}
+.submit-button:hover span{color: #3fa0fa;}
+.submit-button:hover{border: 1px solid #3fa0fa;}
 
 
 
 
 .call-numbers{width: 50%; height: 100%; box-sizing:border-box; padding-left: 20px;}
 .call-numbers>div{margin-bottom: 60px;}
-.call-numbers h1{color: #53e5ff; font-size: 30px; font-weight: 400; margin-top: -8px;}
+.call-numbers h1{color: #3fa0fa; font-size: 30px; font-weight: 400; margin-top: -8px;}
 .call-numbers p{font-size: 20px; color: #c2c2c2; margin-top: 10px;}
 .call-numbers a{width: 50px; display: block; margin-top: 20px; margin-left: 10px;}
 .call-numbers a img{width: 100%;}

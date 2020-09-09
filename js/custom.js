@@ -82,4 +82,24 @@ $(window).ready(function(){
     }
     hasScrolled()
    
+
+
+    // move scroll
+
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 500) {
+            $('.move-top').fadeIn(200);
+        } else {
+            $('.move-top').fadeOut(200);
+        }
+    });
+    
+    $(".move-top").click(function() {
+        $('html, body').animate({
+            scrollTop : 0
+        }, 400);
+        return false;
+    });
+
+
 })
