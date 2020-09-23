@@ -33,7 +33,7 @@ $(window).ready(function(){
     // })
 
 
-    $(".click").eq(1).trigger("click");
+    $(".click").eq(0).trigger("click");
     
     // 전체 보기 카테고리 파트
     $(".button-group button").click(function(){

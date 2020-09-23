@@ -6,8 +6,10 @@ ul, ol{list-style: none;}
 a{text-decoration: none;}
 .center{overflow: hidden; max-width: 1200px; width: 100%; margin: auto;}
 
+body{padding-top: 1px;}
+
 section{width: 100%; height: 100vh;}
-.page-title{text-align: center; position: relative; z-index: 2; display: block; padding-top: 100px;}
+.page-title{text-align: center; padding-top: 100px; position: relative; z-index: 2; display: block;}
 .page-title h1{font-size: 40px; color: #555; font-weight: 400;}
 .page-title span{display: inline-block; height: 3px; width: 60px; background: #555;}
 
@@ -67,11 +69,11 @@ header.on span{position:absolute; width:100%; height:2px; background:#fff; left:
 
 /* works-page */
 
-
+.pages-bg-wrap{max-width: 1200px; width: 100%; background: #8d8d8d; margin: auto;}
 .pages-wrap, .view-all{margin-bottom: 100px;}
 .view-all{transition: all 0.4s; max-width: 1000px; width: 100%; margin: auto;  position: relative; animation-name: pageanimation; animation-duration: .8s;}
 .pages-wrap{position: relative; display: flex; width: 100%; justify-content: space-between; align-items: center; top: 0; animation-name: pageanimation; animation-duration: .8s;}
-.pages-slide{max-width: 1000px; width: 100%;}
+.pages-slide{width: 100%; height: auto; box-sizing: border-box; padding: 10px;}
 
 
 @keyframes  pageanimation{
@@ -79,21 +81,27 @@ header.on span{position:absolute; width:100%; height:2px; background:#fff; left:
   to{transform: scale(1);}
 }
 
-.works-page{height: auto;}
-.slide-wrap .pages{display: flex; box-sizing: border-box;  box-shadow: 1px 1px 10px 1px #999; padding: 40px; width: 100%; height: 100%; background: #fff;}
-.pages .page-img{width: 50%; height: 100%; overflow: hidden;}
+.works-page{height: auto; margin-top: 0px;}
+.slide-wrap .pages{display: flex; align-items: center; box-sizing: border-box; box-shadow: 1px 1px 10px 1px #999; padding: 50px; width: 100%; height: 100%; background: #fff;}
+.pages .page-img{width: 65%; height: 100%; overflow: hidden;}
 .pages .page-img img{width: 100%; display: flex;} 
 .responsive{display: flex; justify-content: space-between; padding-top: 5px;}
 .responsive img{width: 100%;}
 .tablet {width: 50%;}
 .mobile {width: 30%;}
 
+.swiper-slide{transition: all 0.4s; transition-delay: 0.2s;}
+.swiper-slide-active{transform: scale(1);}
+.swiper-slide-prev{transform: scale(0.8);}
+.swiper-slide-next{transform: scale(0.8);}
 
 
-.pages .page-txt{width: 50%; height: auto; box-sizing: border-box; padding: 50px;}
+.pages .page-txt{width: 35%; height: auto; box-sizing: border-box; padding-left: 40px;}
 .pages .page-txt b{font-size: 40px;}
 .pages .page-txt h1{margin-bottom: 15px; color: #555; font-weight: 500;}
 .pages .page-txt p{color: #777; margin-bottom: 20px;}
+
+
 
 .view-link{transition: all 0.1s; margin-right: 10px; display: inline-block; position: relative; border: 1px solid #555; overflow: hidden; padding: 10px 0; width: 150px; text-align: center; }
 .view-link span{position: relative; font-weight: 500; color: #555; transition: all 0.4s;}
@@ -102,18 +110,30 @@ header.on span{position:absolute; width:100%; height:2px; background:#fff; left:
 .view-link:hover span{color: #fff;}
 .view-link:hover{border: 1px solid #3f60fa;}
 
+.view-link.works{width: 100%;}
+
 .lan{display: flex; margin-bottom: 20px;}
 .lan span{margin-right: 10px; font-size: 14px; border-radius: 5px; font-weight: bold; background: #555; color: #fff; padding:3px 10px; display: block;}
 
 
 
 /* 슬라이드 좌우 이동버튼 */
-.move-btn i{transition: all .3s; color: #777; padding: 20px 30px; text-align: center; font-size: 40px; _border: 1px solid red;}
-.move-btn:hover i{transform: scale(1.5); color: #555;}
+.swiper-button-next i{transition: all .3s; color: #777; padding: 20px 30px; text-align: center; font-size: 40px;}
+.swiper-button-next{outline: none;}
+.swiper-button-next:hover i{transform: scale(1.5); color: #555; }
+
+
+.swiper-button-prev i{transition: all .3s; color: #777; padding: 20px 30px; text-align: center; font-size: 40px;}
+.swiper-button-prev{outline: none;}
+.swiper-button-prev:hover i{transform: scale(1.5); color: #555;}
+
+.swiper-button-prev::after{content: '';}
+.swiper-button-next::after{content: '';}
+
 
 
 /* 뷰 전환 버튼 */
-.view-change-wrap{z-index: 99; overflow: hidden; max-width: 1000px; width: 100%; margin: auto; _border: 1px solid greenyellow; margin-bottom: 20px;}
+.view-change-wrap{z-index: 99; overflow: hidden; max-width: 1360px; padding: 0 80px; width: 100%; margin: auto; _border: 1px solid greenyellow; margin-bottom: 20px;}
 .view-change-box{display: flex; float: right; _border: 1px solid red;}
 
 .click i{color: #fff; font-size: 35px; padding: 10px; transition: all 0.2s;}
@@ -154,8 +174,7 @@ header.on span{position:absolute; width:100%; height:2px; background:#fff; left:
 
 /* 타이틀 */
 .works-pages{height: auto; overflow: hidden; padding-bottom: 100px; }
-.works-background{transition: all 0.5s; z-index: 1; _background: #1b242f; width: 100%; height: 50%; position: absolute;}
-.works-background{background: rgb(66, 63, 55);}
+.works-background{transition: all 0.5s; z-index: 1;  background: #1b242f; width: 100%; height: 50%; position: absolute;}
 
 
 /* 전체 뷰 적용 코드 */
