@@ -2,44 +2,57 @@ $(window).ready(function(){
 
     // 포트폴리오 페이지 화면 전환
 
-    $(".pages-wrap").hide();
-    $(".view-all").hide();
+    // $(".pages-wrap").hide();
+    // $(".view-all").hide();
+    $(".view-all").css('opacity','0');
 
     $(".click").click(function(){
         $(".click").removeClass("active");
         $(this).addClass("active");
 
         if($(".click.one").hasClass("active")){
-            $(".view-all").hide();
-           
 
+            $(".view-all").removeClass("release");
+            $(".pages-wrap").addClass("release");
+            $(".view-all").css('position','fixed');
+            $(".view-all").hide();
             $(".pages-wrap").show();
         }
 
         if($(".click.all").hasClass("active")){
-          
+
+            $(".pages-wrap").removeClass("release");
+            $(".view-all").addClass("release");
             $(".pages-wrap").hide();
+
+            $(".view-all").css({
+                position : "relative",
+                opacity: "1"
+            });
+            
             $(".view-all").show();
         }
     })
 
     // 포폴 화면 전환시 백그라운드
-    // $(".click.one").click(function(){
-    //     $(".works-background").css('height','50%')
-    // })
+    $(".click.one").click(function(){
+        $(".works-background").css('height','50%');
+    })
 
-    // $(".click.all").click(function(){
-    //     $(".works-background").css('height','60%')
-    // })
+    $(".click.all").click(function(){
+        $(".works-background").css('height','60%');
+        $(".page-box").show();
+    })
 
 
-    $(".click").eq(0).trigger("click");
+    // $(".click").eq(0).trigger("click");
+
     
     // 전체 보기 카테고리 파트
     $(".button-group button").click(function(){
         $("button").removeClass("active");
         $(this).addClass("active");
-    })
+    });
 
 
 

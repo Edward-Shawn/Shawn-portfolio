@@ -20,7 +20,17 @@ header{ position: fixed; z-index: 999; top: 0;  width: 100%; height: auto; backg
 .gnb{position: relative; width: auto; display: table; margin: auto;  }
 .gnb li{display: inline-block; padding: 5px 0;}
 .gnb li a{color: #777; display: block; padding: 5px 50px; font-weight: 400; font-size: 20px;}
+.gnb li a:hover{animation-name: menu; animation-duration: .8s;}
+
 .gnb span{position:absolute; width:100%; height:2px; background:#777; left:0; bottom:0;}
+
+
+@keyframes menu{
+  0%{transform: scale(1);}
+  50%{transform: scale(1.2);}
+  100%{transform: scale(1);}
+}
+
 
 header.on{background: #1b242f; padding: 10px; box-shadow: 1px 1px 10px 1px #000;}
 header.on li a{color: #fff;}
@@ -69,11 +79,13 @@ header.on span{position:absolute; width:100%; height:2px; background:#fff; left:
 
 /* works-page */
 
-.pages-bg-wrap{max-width: 1200px; width: 100%; background: #8d8d8d; margin: auto;}
-.pages-wrap, .view-all{margin-bottom: 100px;}
-.view-all{transition: all 0.4s; max-width: 1000px; width: 100%; margin: auto;  position: relative; animation-name: pageanimation; animation-duration: .8s;}
-.pages-wrap{position: relative; display: flex; width: 100%; justify-content: space-between; align-items: center; top: 0; animation-name: pageanimation; animation-duration: .8s;}
-.pages-slide{width: 100%; height: auto; box-sizing: border-box; padding: 10px;}
+.pages-bg-wrap{max-width: 1200px; width: 100%; margin: auto;}
+
+.view-all{transition: all 0.4s; max-width: 1360px; width: 100%; opacity: 0; margin: auto;  position: fixed; padding: 0 80px;}
+.pages-wrap{position: relative; display: flex; width: 100%; justify-content: space-between; align-items: center; top: 0;}
+.pages-slide{width: 100%; height: auto; box-sizing: border-box; padding: 10px; _background: #8d8d8d;}
+
+.release{animation-name: pageanimation; animation-duration: .8s;}
 
 
 @keyframes  pageanimation{
@@ -81,7 +93,10 @@ header.on span{position:absolute; width:100%; height:2px; background:#fff; left:
   to{transform: scale(1);}
 }
 
-.works-page{height: auto; margin-top: 0px;}
+.view-all-bg{background: rgb(221, 221, 221);}
+
+
+.works-page{height: auto; margin-top: 0px; background: #eee; padding-bottom: 100px;}
 .slide-wrap .pages{display: flex; align-items: center; box-sizing: border-box; box-shadow: 1px 1px 10px 1px #999; padding: 50px; width: 100%; height: 100%; background: #fff;}
 .pages .page-img{width: 65%; height: 100%; overflow: hidden;}
 .pages .page-img img{width: 100%; display: flex;} 
@@ -158,8 +173,8 @@ header.on span{position:absolute; width:100%; height:2px; background:#fff; left:
 
 
 /* 카테고리 나누기 */
-.button-group{_border: 1px solid greenyellow; margin-bottom: 10px; width: 100%; text-align: center;}
-.button-group button{ margin: auto; background: transparent; border: none;color: #fff; font-size: 20px; outline: none; padding: 10px 20px; margin: 10px 10px;}
+.button-group{margin-bottom: 50px; width: 100%; text-align: center;}
+.button-group button{margin: auto; background: transparent; border: none; color: #eee; font-size: 20px; outline: none; padding: 10px 20px; margin: 10px 10px;}
 .button-group button.active{background: #3f60fa; color: #fff; animation-name: btn-active; animation-duration: .3s;}
 @keyframes btn-active{
   0% {
@@ -181,25 +196,30 @@ header.on span{position:absolute; width:100%; height:2px; background:#fff; left:
 
 .slide-wrap.all{margin: auto; _border: 1px solid greenyellow; position: relative; z-index: 99;}
 .slide-wrap.all .slide-box{_border: 1px solid rgb(255, 47, 47); max-width: 1400px; width: 100%; margin: auto;}
-.slide-wrap.all .page-box{box-sizing: border-box; _overflow: hidden; _box-shadow: 1px 1px 10px 1px #999; width: 100%; height: 100%;}
-.slide-wrap.all .page-box .page{width: 33.33%; border: 1px solid #777; text-align: center; float: left; display: table; height: 250px; _border: 1px solid #777;}
+.slide-wrap.all .page-box{box-sizing: border-box; _border: 1px solid red; _overflow: hidden; _box-shadow: 1px 1px 10px 1px #999; width: 100%; height: 100%;}
+.slide-wrap.all .page-box .page{width: 33.33%; text-align: center; float: left; display: table; height: 300px;}
 
-.page-hover{transition: all 0.4s; width: 100%; height: 100%; opacity: 0; background: #fff; position: relative; display: table-cell; align-items: center; vertical-align: middle;}
+
+.page-hover{transition: all 0.4s; width: 100%; height: 100%; opacity: 0; background:#eee; position: relative; display: table-cell; align-items: center; vertical-align: middle;}
 .page-hover>div{transition: all 0.2s; margin-bottom: 20px; position: absolute; top: 0; text-align: center; width: 100%;}
 .page-hover>div P{color: #3f60fa; font-size: 13px;}
 .page-hover a{transition: all 0.2s; position: absolute; display: block; margin: 0 auto; left: 0; right: 0; bottom: 0; border: 1px solid #3f60fa; color: #777;  padding: 10px; }
 
 
-.page-box .page:hover .page-hover{ opacity: 1;}
-.page:hover .page-hover>div{top: 20%;}
-.page:hover .page-hover a{bottom: 20%;}
+.page-box .page:hover .page-hover{opacity: 1;}
+.page-box .page:hover .page-hover>div{transform: translateY(50px);}
+.page-box .page:hover .page-hover a{transform: translateY(-50px);}
 
 
 
-.grid-item.one{background: rgb(190, 195, 204);}
-.grid-item.two{background: rgb(187, 189, 192);}
-.grid-item.three{background: rgb(170, 169, 172);}
+.grid-item.one{background: url(../img/viewAll/K-001.jpg); background-size: cover;}
+.grid-item.two{background: url(../img/viewAll/K-002.jpg); background-size: cover;}
+.grid-item.three{background: url(../img/viewAll/K-003.jpg); background-size: cover;}
+.grid-item.four{background: url(../img/viewAll/K-004.jpg); background-size: cover;}
+.grid-item.five{background: url(../img/viewAll/K-005.jpg); background-size: cover;}
+.grid-item.six{background: url(../img/viewAll/K-006.jpg); background-size: cover;}
 
+.grid-item{background: #eee; }
 
 
 
@@ -218,8 +238,8 @@ header.on span{position:absolute; width:100%; height:2px; background:#fff; left:
 .pj-content p{margin-bottom: 50px; _border: 1px solid red; padding-right: 30%;}
 
 .pj-img{width: 55%; height:600px; display: table; background: #aaa; position: relative; margin-bottom: 20px; margin-left: -5%;}
-.pj-img .img-box{overflow: hidden;}
-.pj-img img{width: 105%; object-fit: cover; display: none;}
+.pj-img .img-box{overflow: hidden; width: 100%; height: 100%;}
+.pj-img img{width: 105%; object-fit: cover; _display: none;}
 
 
 .pj-move-btn{display: flex; align-items: center; width: 200px;  height: 80px; background: #555; position: absolute; left: 50%; transform: translateX(-50%); z-index: 99;}
