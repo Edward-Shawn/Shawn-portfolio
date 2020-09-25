@@ -16,7 +16,8 @@ $(document).ready(function(){
           $(this).siblings("span").width(liWidth);
           $(".gnb span").animate({ left: liLeft },200);
     
-          $("html,body").animate({ scrollTop: pagePos }, 300);
+          $("html,body").animate({ scrollTop: pagePos + -60 }, 300);
+          // pagePos 뒤의 + 숫자가 이동 마진 값을 정함
         });
     
         // $(".gnb li").eq(0).trigger("click");

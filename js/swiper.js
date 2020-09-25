@@ -9,3 +9,16 @@ var swiper = new Swiper('.swiper-container', {
     },
 
   });
+
+
+  // var swiper = new Swiper('.swiper-container1', {
+  //   direction: 'vertical',
+  //   loop:true,
+  //   slidesPerView: 1,
+    
+  //   navigation: {
+  //     nextEl: '.swiper-button-next1',
+  //     prevEl: '.swiper-button-prev1',
+  //   },
+  // });
+
