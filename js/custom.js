@@ -47,6 +47,24 @@ $(window).ready(function(){
 
     // $(".click").eq(0).trigger("click");
 
+    $(".mobile-btn").click(function(){
+        if(!$(".gnb").hasClass("on")){
+       
+            $(".gnb").addClass("on");
+            $(".menu-bg").addClass("on");
+        }else{
+            $(".gnb").removeClass("on");
+     
+            $(".menu-bg").removeClass("on");
+        }
+        
+    })
+
+
+
+
+
+
     
     // 전체 보기 카테고리 파트
     $(".button-group button").click(function(){
