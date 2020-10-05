@@ -22,14 +22,14 @@
 @media screen and (max-width: 1100px){
     .slide-wrap.all .page-box .page{width: 50%;}
     .pages .page-img{width: 60%;}
-    .about-info .about-txt{padding-right: 0;}
-    .about-face{width: 25%;}
+    .about-info .about-txt{padding-right: 0; width: auto; float: left;}
+    .about-face{width: 25%; float: left;}
     
     .about-page .info-box .about-info{display: block;}
-    .about-wrap{float: unset; margin: auto; width: 100%;}
+    .about-wrap{display: block; float: unset; margin: auto; width: 100%; padding: 5px; overflow: hidden;}
     
 
-    .Ed-title{margin-top: 50px;}
+    .Ed-title{margin-top: 50px; clear: both;}
 
     .Ed-title h1{display: inline-block; padding-right: 20px; margin-bottom: 0;}
     .Ed-title p{display: inline-block; }
@@ -65,7 +65,7 @@
     .contact-wrap{display: block;}
     .side-contact{text-align: center; width: auto;}
     .call-numbers{padding-left: 0; display: inline-flex; width: auto;}
-    .call-numbers a{display: inline-block;}
+    .call-numbers a{display: inline-block; margin-left: 0;}
     .call-numbers>div{width: 200px;}
     .contact-box{margin: auto; width: 500px; }
 
@@ -75,7 +75,8 @@
 
     .call-numbers a{margin-top: 10px;}
     .call-numbers p{margin-top: 17px;}
-
+    
+    .about-face{width: 180px;}
 }
 
 
@@ -105,26 +106,50 @@
 
     .view-all{padding: 0 40px;}
 
-    
+    .about-topTxt b{font-size: 35px;}
+    .about-topTxt p{font-size: 20px;}
 
 }
 
 @media screen and (max-width: 800px){
    
-    .skill-box{display: block; width: 45%; float: left;}
-    .skill-box:nth-child(1){margin-right: 10%;}
+    .skill-box{display: block; width: 46%; float: left;}
+    .skill-box:nth-child(1){margin-right: 8%;}
     .skill-icon{width: 100%;}
+
+    .skills-info{overflow: hidden; margin-bottom: 80px;}
+    .sk-title{margin-top: 0; margin-bottom: 30px;}
+
+}
+
+@media screen and (max-width: 760px){
+    .about-page{padding: 0 40px;}
     
 }
 
+
 @media screen and (max-width: 750px){
     
+}
+
+@media screen and (max-width: 700px){
+    .icon-txt h1{font-size: 16px;}
+    .skill-box{width: 47%;}
+    .skill-box:nth-child(1){margin-right: 6%;}
+
+    .about-face .about-name{display: block; margin-bottom: 0; margin-top: 0;}
+    .about-txt .about-name{display: none;}
+
+    .about-info .about-txt{width: 50%;}
+    .about-info .about-txt>p{font-size: 14px;}
+    .icon-txt span{font-size: 12px;}
 }
 
 
 
 @media screen and (max-width: 650px){
     .slide-wrap.all .page-box .page{width: 100%;}
+    footer p{font-size: 13px;}
 }
 
 @media screen and (max-width: 600px){
@@ -136,6 +161,14 @@
     .call-numbers>div{width: auto;}
     .call-numbers>div:nth-child(2){margin-left: 20px;}
     .call-numbers h1{font-size: 20px;}
+
+    .about-face{width: 160px;}
+    .about-name h1{font-size: 20px;}
+    .about-name p{font-size: 10px;}
+
+    .icon-fill{height: 8px;}
+
+    .button-group button{font-size: 15px; width: 135px;}
 
 }
 
@@ -149,9 +182,44 @@
     .lan span{font-size: 12px; font-weight: 400;}
 }
 
+@media screen and (max-width: 450px){
+    .Ed-title h1{font-size: 20px;}
+    .Ed-title p{font-size: 13px;}
+
+   
+    .about-face{float: unset; margin: auto; width: 190px;}
+    .about-info .about-txt{float: unset; text-align: center; margin-top: 20px; width: 100%; margin-left: 0;}
+    .about-face .about-name{text-align: center;}
+    .about-name h1{font-size: 30px;}
+    .about-name p{font-size: 15px;}
+    .about-topTxt{margin-bottom: 20px;}
+
+    .about-topTxt b{font-size: 25px;}
+    .about-topTxt p{font-size: 15px;}
+    
+    .sk-title{font-size: 28px;}
+    .skill-box{float: unset; width: 100%; margin-bottom: 0;}
+    .skill-box:nth-child(1){margin-right: 0;}
+    
+    .pages-bg-wrap{width: 90%;}
+    .swiper-button-prev{display: none;}
+    .swiper-button-next{display: none;}
+
+    .view-all{padding: 0 20px;}
+}
+
+
 @media screen and (max-width: 430px){
     .call-numbers p{font-size: 14px;}
+    .call-numbers a{width: 35px;}
     .contac-txt{font-size: 13px;}
+    
+}
+
+@media screen and (max-width: 400px){
+    .Ed-title{padding-left: 0; border-left: none; _text-align: center;}
+    .Ed-title p{margin-bottom: 5px;}
+    .Ed-title h1{padding-right: 0; font-size: 25px; margin-bottom: 20px;}
 }
 
 
@@ -160,4 +228,22 @@
     .slide-wrap .pages{padding: 9px;}
     .pages .page-txt p{padding: 0 5px;}
     .view-link.works{margin: auto; margin-top: 20px; width: 90%;}
+
+    footer p{font-size: 12px;}
+    .about-page{padding: 0 25px;}
+
+    .button-group button{width: 100px; font-size: 14px;}
+
+    .slide-wrap.all .page-box .page{height: 260px;}
+
 }
+
+@media screen and (max-width: 350px){
+    .pages-bg-wrap{width: 95%;}
+
+    .icon-txt h1{font-size: 15px;}
+    .icon-fill{height: 7px;}
+    
+    .view-all{padding: 0 5px;}
+}
+

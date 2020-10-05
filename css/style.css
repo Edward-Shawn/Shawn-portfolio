@@ -17,7 +17,7 @@ section{width: 100%; height: 100vh;}
 
 /* header style */
 header{_border: 1px solid red; width: 100%; background: transparent; position: fixed; top: 0; z-index: 999; transition: all 0.2s;}
-.menu .logo{ display: none; align-items: center; float: left; margin-top: 6px; margin-left: 40px;}
+.menu .logo{ display: none; align-items: center; float: left; margin-top: 6px; margin-left: 5%;}
 .menu .logo h1{margin-top: -5px; margin-bottom: -5px;}
 .menu .logo span{font-size: 18px;}
 
@@ -61,7 +61,7 @@ header.on .gnb > span{position:absolute; width:100%; height:2px; background:#fff
 
 
 /* move top */
-.move-top{border-radius: 10px; position: fixed; transform: scale(1.2); transition: all .5s; opacity: 0; top: 90%; right: 10%;background: #3f60fa; z-index: 999;}
+.move-top{border-radius: 10px; position: fixed; transform: scale(1.2); transition: all .5s; opacity: 0; top: 85%; right: 10%;background: #3f60fa; z-index: 999;}
 .move-top span i{font-size: 30px; padding: 10px 15px;  color: #eee;}
 .move-top.on:hover{transform: scale(1.2); transition: all .5s;}
 
@@ -115,7 +115,7 @@ header.on .gnb > span{position:absolute; width:100%; height:2px; background:#fff
 .view-all-bg{background: rgb(221, 221, 221);}
 
 
-.works-page{_overflow-x: hidden; height: auto; margin-top: 0px; background: #eee; padding-bottom: 50px;}
+.works-page{overflow-x: hidden; height: auto; margin-top: 0px; background: #eee; padding-bottom: 50px;}
 .slide-wrap .pages{display: flex; align-items: center; box-sizing: border-box; box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.623); padding: 50px; width: 100%; height: 100%; background: #fff;}
 .pages .page-img{width: 65%; height: 100%; overflow: hidden;}
 .pages .page-img img{width: 100%; display: flex;} 
@@ -277,7 +277,7 @@ header.on .gnb > span{position:absolute; width:100%; height:2px; background:#fff
 
 .about-page .info-box{width: 100%; max-width: 1200px; _border: 1px solid #eee; position: relative; margin: auto; height: auto; margin-top: 40px; background: #fff;}
 .about-page .info-box .about-info{width: 100%; height: 100%;  box-sizing: border-box; padding-top: 20px; display: flex;}
-.about-wrap{display: flex; _border: 1px solid red; float: left; width: 60%;}
+.about-wrap{display: flex; float: left; width: 60%;}
 /* about-topTxt */
 
 .about-topTxt{ margin-bottom: 80px;}
@@ -285,10 +285,11 @@ header.on .gnb > span{position:absolute; width:100%; height:2px; background:#fff
 .about-topTxt b{font-size: 50px; color: #3f60fa; text-shadow: 2px 1px 1px #ccc; font-family: sans-serif;}
 
 /* about face */
-.about-face{width: 35%; _border: 1px solid #eee;}
+.about-face{width: 35%;}
 .about-face .face-img{width: 100%; margin-left: 5px; position: relative; display: table;}
 .face-img:before{content: ''; position: absolute; width: 100%; height: 100%; box-sizing: border-box; top: -5px; right: 8px; border: 3px solid #3f60fa;;}
 .face-img img{width: 100%;  display: block;}
+.about-face .about-name{display: none;}
 
 .about-name{margin-bottom: 20px; margin-top: -10px; color: #555; }
 .about-name h1{padding-bottom: 20px; font-size: 30px; margin-right: 5px; font-weight: 400; display: inline-block;}
@@ -298,7 +299,7 @@ header.on .gnb > span{position:absolute; width:100%; height:2px; background:#fff
 
 
 /* about info txt */
-.about-info .about-txt{color: #777; box-sizing: border-box; margin-left: 5%; padding-right: 20px; width: 60%; _border: 1px solid #eee;}
+.about-info .about-txt{color: #777; box-sizing: border-box; margin-left: 20px; padding-right: 20px; width: 60%; _border: 1px solid #eee;}
 .about-info .about-txt p{font-size: 15px;}
 .about-info .about-txt>p{font-size: 16px;}
 
@@ -387,7 +388,7 @@ textarea{position: relative; transition: all 0.4s; color: #8d8d8d; background: #
 }
 
 
-footer{bottom: 0; width: 100%; height: 100px; background: #0f151b; display: flex; align-items: center; text-align: center;}
+footer{bottom: 0; width: 100%; height: 100px; background: #0f151b; display: flex; align-items: center; text-align: center; padding: 0 20px;}
 
 footer p{color: #777; margin: auto;}
 
