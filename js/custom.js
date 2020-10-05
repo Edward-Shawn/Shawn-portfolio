@@ -1,9 +1,8 @@
-$(window).ready(function(){
+$(document).ready(function(){
 
     // 포트폴리오 페이지 화면 전환
 
-    // $(".pages-wrap").hide();
-    // $(".view-all").hide();
+   
     $(".view-all").css('opacity','0');
 
     $(".click").click(function(){
@@ -34,6 +33,8 @@ $(window).ready(function(){
         }
     })
 
+
+
     // 포폴 화면 전환시 백그라운드
     $(".click.one").click(function(){
         $(".works-background").css('height','50%');
@@ -47,14 +48,16 @@ $(window).ready(function(){
 
     // $(".click").eq(0).trigger("click");
 
+
     $(".mobile-btn").click(function(){
+        
         if(!$(".gnb").hasClass("on")){
-       
+            
             $(".gnb").addClass("on");
             $(".menu-bg").addClass("on");
         }else{
+            
             $(".gnb").removeClass("on");
-     
             $(".menu-bg").removeClass("on");
         }
         
@@ -62,6 +65,13 @@ $(window).ready(function(){
 
 
 
+    $(".menu-bg").click(function(){
+        $(this).removeClass("on");
+        $(".gnb").removeClass("on");
+    })
+
+
+   
 
 
 
@@ -99,11 +109,14 @@ $(window).ready(function(){
 
         if (st > lastScrollTop && st > navbarHeight){
             // 스크롤 올릴때 (높게)
+            $('.menu').addClass('on');
             $('header').addClass('on');
+            
             
         }else{
             if(lastScrollTop && st < navbarHeight) {
             // 스크롤 내릴때 (낮게)
+            $('.menu').removeClass('on');
             $('header').removeClass('on');
             }
 

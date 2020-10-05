@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/media.css">
-    <link rel="stylesheet" href="css/animate.css">
+    <!-- <link rel="stylesheet" href="css/animate.css"> -->
 
 
     <title>Portfolio</title>
@@ -18,17 +18,23 @@
     <header>
         
         <div class="menu">
-            
 
+            <div class="logo">
+                <h1>S</h1>
+                <span>hawn</span>
+            </div>
+
+
+            <ul class="gnb">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Works</a></li>
+                <li><a href="#">Project</a></li>
+                <li><a href="#">About</a></li>
+                <li class="go-contact"><a href="#">Contact</a></li>
+                <span></span>
+            </ul>
             <div class="menu-bg">
-                <ul class="gnb">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Works</a></li>
-                    <li><a href="#">Project</a></li>
-                    <li><a href="#">About</a></li>
-                    <li class="go-contact"><a href="#">Contact</a></li>
-                    <span></span>
-                </ul>
+                
             </div>
             
            
@@ -126,7 +132,7 @@
                                             <h1><b>01.</b></h1>
                                             <h1>Omega Web site</h1>
                                             <p>responsive</p>
-                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+                                            <p class="info-p">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
                                             Cum sociis</p>
                                         
                                             <div class="lan">
@@ -353,31 +359,37 @@
 
             <div class="about-info wow" data-wow-duration=".45s" data-wow-delay="1s" style="visibility: visible; animation-duration: 1s; animation-delay: 1s; animation-name: fadeInLeft;">
             
-                <div class="about-face">
-                    <div class="face-img">
-                        <img src="img/KakaoTalk_20200831_152031718.jpg" alt="">
+                <div class="about-wrap">
+                    <div class="about-face">
+                        <div class="face-img">
+                            <img src="img/KakaoTalk_20200831_152031718.jpg" alt="">
+                        </div>
+                       
                     </div>
-                   
+                    
+                    <div class="about-txt">
+                        <div class="about-name">
+                            <h1>Shawn</h1><span>손병현</span>
+                            <p>Web Publisher</p>
+                        </div>
+                        <p>안녕하세요 웹 퍼블리셔 손병현  입니다.<br>
+                           항상 사용자 입장에서 생각하는 걸 좋아해서 계속 고민하며<br>
+                           더 나은 방향을 모색하는 편이며
+                           계속 발전해<br> 나가는 웹 퍼블리셔가 되기 위해 노력하고 있습니다.
+                        </p>
+                    </div>
                 </div>
                 
-                <div class="about-txt">
-                    <div class="about-name">
-                        <h1>Shawn</h1><span>손병현</span>
-                        <p>Web Publisher</p>
-                    </div>
-                    <p>안녕하세요 웹 퍼블리셔 손병현  입니다.<br><br>
-
-                       항상 사용자 입장에서 생각하는 걸 좋아해서 계속 고민하며<br>
-                       더 나은 방향을 모색하는 편이며
-                       계속 발전해<br> 나가는 웹 퍼블리셔가 되기 위해 노력하고 있습니다.
-                    </p>
-                </div>
 
 
                 <div class="Ed-title wow" data-wow-duration=".45s" data-wow-delay="1s" style="visibility: visible; animation-duration: 1s; animation-delay: 1s; animation-name: fadeInRight;">
                     <h1>Education</h1>
-                    <p>단국대학교 예술대학 미술학부</p>
-                    <p>더조은컴퓨터아트학원 스마트웹디자인(UI/UX)(콘텐츠개발)</p>
+                    <div>
+                        <p class="ed-p1">단국대학교 예술대학 미술학부</p>
+                        <p>더조은컴퓨터아트학원 스마트웹디자인(UI/UX)(콘텐츠개발)</p>
+                    </div>
+                    
+
                 </div>
             </div>
       
@@ -465,7 +477,7 @@
 
 
 
-    <section class="contact-page" style="height: 90vh;">
+    <section class="contact-page">
         <svg preserveAspectRatio="none" viewBox="0 0 100 102" height="75" width="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" class="svgcolor-light">
             <path d="M0 0 L50 100 L100 0 Z" fill="#fff" stroke="#fff"></path>
         </svg>
@@ -482,20 +494,30 @@
 
             <div class="contact-wrap">
             
+                <div class="side-contact">
+                    <div class="call-numbers wow">
+                        <div>
+                            <h1>Open Kakao</h1>
+                            <a href="">
+                                <img src="img/KakaoTalk_20200901_150221944.png" alt="">
+                            </a>
+                        </div>
+                        <div>
+                            <h1>E-mail</h1>
+                            <P>sbh3834@naver.com</P>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="contact-box wow">
                     <form id="contact" action="">
                         <ul>
-                            <li class="half">
+                            <li>
                                 <input type="text" name="name" placeholder="Name">
                                 <label class="input-label"></label>
                             </li>
         
-                            <li class="half" style="margin-left: 2%;">
-                                <input type="text" name="name" placeholder="Name">
-                                <label class="input-label"></label>
-                            </li>
-        
-                            <li style="clear: both;">
+                            <li>
                                 <input type="email" name="email" placeholder="email">
                                 <label class="input-label"></label>
                             </li>
@@ -517,20 +539,7 @@
                 </div>
                 
     
-                <div style="width: 50%; overflow: hidden;">
-                    <div class="call-numbers wow">
-                        <div>
-                            <h1>Open Kakao</h1>
-                            <a href="">
-                                <img src="img/KakaoTalk_20200901_150221944.png" alt="">
-                            </a>
-                        </div>
-                        <div>
-                            <h1>EMAIL</h1>
-                            <P>sbh3834@naver.com</P>
-                        </div>
-                    </div>
-                </div>
+               
                 
 
             </div>
@@ -555,9 +564,15 @@
     <script src="js/swiper.js"></script>
 
     <script>
+
+
         new WOW().init();
 
         $(document).ready(function(){
+
+     
+
+
             $('.grid').isotope({
                 // options
                 itemSelector: '.grid-item',

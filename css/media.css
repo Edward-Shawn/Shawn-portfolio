@@ -1,42 +1,163 @@
+@media screen and (max-width: 1280px){
+    
+}
+
+
+
+@media screen and (max-width: 1200px){
+    .slide-wrap .pages{padding: 30px;} 
+}
+
+
+
 @media screen and (max-width: 1150px){
     .center-txt h1{font-size: 50px; }
     .center-txt b{font-size: 100px;}
-}
-
-@media screen and (max-width: 1150px){
-
     .center-txt b{font-size: 80px; margin-top: -20px; display: inline-block;}
     .center-txt em{float: unset;}
 
 
 }
 
-@media screen and (max-width: 880px){
-    header{background: #fff;}
+@media screen and (max-width: 1100px){
+    .slide-wrap.all .page-box .page{width: 50%;}
+    .pages .page-img{width: 60%;}
+    .about-info .about-txt{padding-right: 0;}
+    .about-face{width: 25%;}
+    
+    .about-page .info-box .about-info{display: block;}
+    .about-wrap{float: unset; margin: auto; width: 100%;}
+    
+
+    .Ed-title{margin-top: 50px;}
+
+    .Ed-title h1{display: inline-block; padding-right: 20px; margin-bottom: 0;}
+    .Ed-title p{display: inline-block; }
+    .ed-p1{margin-right: 20px;}
+
+    .sk-title{_text-align: center; font-weight: 500; font-size: 35px;}
+    .skills-info{width: 100%;}
+
+}
+
+@media screen and (max-width: 980px){
+    .click i{font-size: 25px;}
+    .click.one{margin-right: 6px;}
+    .button-group button{font-size: 16px;}
+
+    .slide-wrap .pages{display: block;}
+    .page-title h1 {font-size: 30px; margin-bottom: -10px;}
+    .page-title span{width: 45px; height: 2px; margin-top: -20px;}
+
+    .pages .page-txt h1{display: inline-block; margin-bottom: 0;}
+    .pages .page-img{margin: auto;}
+    .pages .page-txt{padding-left: 0; width: 100%; text-align: center;}
+    .lan{display: unset; text-align: center;}
+    .lan span{display: inline-block;}
+
+    .view-link{margin-top: 20px;}
+
+
+    
+
+}
+@media screen and (max-width: 870px){
+    .contact-wrap{display: block;}
+    .side-contact{text-align: center; width: auto;}
+    .call-numbers{padding-left: 0; display: inline-flex; width: auto;}
+    .call-numbers a{display: inline-block;}
+    .call-numbers>div{width: 200px;}
+    .contact-box{margin: auto; width: 500px; }
+
+    .contact-page form input{font-size: 15px;}
+    textarea{font-size: 15px;}
+    .submit-button{float: unset; margin: auto; display: block;}
+
+    .call-numbers a{margin-top: 10px;}
+    .call-numbers p{margin-top: 17px;}
+
+}
+
+
+@media screen and (max-width: 860px){
+    .menu .logo{display: flex;}
+    .logo-text{display: block;}
+    .logo{display: none;}
+    .sub-txt{float: right;}
+
+    header{background: #fff;  border-bottom: 1px solid #ccc;}
     header.on .gnb{background: #1b242f;}
     
-    .menu-bg.on{position: fixed; top: 0; left: 0; bottom: 0; right: 0; background: rgba(0, 0, 0, 0.295); z-index: -9;}
+    .menu-bg.on{position: fixed;  top: 50px; bottom: 0; right: 0; left: 0; background: rgba(0, 0, 0, 0.295); z-index: -9;transition: all 0.2s;}
 
+    header.on .menu-bg.on{top: 70px;}
 
-    .menu{position: relative; background: #fff;}
-
-    .gnb{position: fixed;
-        display: block;
-        transition: all 0.4s;
-        border-top: 1px solid #eee;
-        box-shadow: 1px 1px 5px #000;
-        margin-right: 0;
-        top: 0;
-        right: -500px;
-        bottom: 0;
-        width: 50%;
-        list-style: none;
-        margin-top: 60px;
-        background: #fff;}
+    .menu{position: relative;}
+    .gnb{position: fixed; text-align: center; display: block; transition: all 0.2s; border-left: 1px solid #eee; border-top: 1px solid #eee;  margin-right: 0;
+        top: 50px; right: -500px; bottom: 0; width: 50%; list-style: none; background: #fff;}
     .gnb.on{right: 0;}
-
+    header.on .gnb{ border: none;}
 
     .gnb li{display: block;}
-    .mobile-btn{display: block; margin-top: 15px; margin-right: 20px;}
+    .mobile-btn{display: block; margin-top: 12px; margin-right: 20px;}
     .go-contact{display: inline-block !important;}
+
+
+    .view-all{padding: 0 40px;}
+
+    
+
+}
+
+@media screen and (max-width: 800px){
+   
+    .skill-box{display: block; width: 45%; float: left;}
+    .skill-box:nth-child(1){margin-right: 10%;}
+    .skill-icon{width: 100%;}
+    
+}
+
+@media screen and (max-width: 750px){
+    
+}
+
+
+
+@media screen and (max-width: 650px){
+    .slide-wrap.all .page-box .page{width: 100%;}
+}
+
+@media screen and (max-width: 600px){
+    .contact-box{width: 100%;}
+}
+
+@media screen and (max-width: 500px){
+    .contact-wrap{padding: 0 15px;}
+    .call-numbers>div{width: auto;}
+    .call-numbers>div:nth-child(2){margin-left: 20px;}
+    .call-numbers h1{font-size: 20px;}
+
+}
+
+
+@media screen and (max-width: 480px){
+    .pages .page-img {width: 80%; margin-top: 10px;}
+    .pages .page-txt b{font-size: 25px;}
+    .pages .page-txt h1{font-size: 20px;}
+    .pages .page-txt p{margin-top: -5px; margin-bottom: 10px;}
+    .pages .page-txt .info-p{font-size: 13px;}
+    .lan span{font-size: 12px; font-weight: 400;}
+}
+
+@media screen and (max-width: 430px){
+    .call-numbers p{font-size: 14px;}
+    .contac-txt{font-size: 13px;}
+}
+
+
+@media screen and (max-width: 380px){
+    .pages .page-txt h1 {font-size: 18px;}
+    .slide-wrap .pages{padding: 9px;}
+    .pages .page-txt p{padding: 0 5px;}
+    .view-link.works{margin: auto; margin-top: 20px; width: 90%;}
 }

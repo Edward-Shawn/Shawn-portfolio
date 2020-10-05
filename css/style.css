@@ -16,13 +16,20 @@ section{width: 100%; height: 100vh;}
 .center .page-title{float: left;}
 
 /* header style */
-header{box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.329); border-bottom: 1px solid #777; width: 100%; position: fixed; top: 0; z-index: 999;}
-.menu{width: 100%; height: 60px; position: relative;}
-.menu-bg{transition: all .4s;}
+header{_border: 1px solid red; width: 100%; background: transparent; position: fixed; top: 0; z-index: 999; transition: all 0.2s;}
+.menu .logo{ display: none; align-items: center; float: left; margin-top: 6px; margin-left: 40px;}
+.menu .logo h1{margin-top: -5px; margin-bottom: -5px;}
+.menu .logo span{font-size: 18px;}
+
+.menu.on .logo{border-color: #fff;}
+.menu.on .logo h1{color: #fff;}
+.menu.on .logo span{color: #fff;}
 
 
+.menu{width: 100%; height: 50px; position: relative; _transition: all 0.2s ease-in-out;}
 
-.gnb{list-style: none; float: right; margin-right: 1%;}
+
+.gnb{list-style: none; position: relative; display: table; margin: 0 auto;}
 .gnb li{display: inline-block; padding: 5px 0;}
 .gnb li a{color: #777; display: block; padding: 5px 50px; font-weight: 400; font-size: 20px;}
 .gnb li a:hover{animation-name: menu; animation-duration: .8s;}
@@ -35,14 +42,18 @@ header{box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.329); border-bottom: 1px solid #
   50%{transform: scale(1.2);}
   100%{transform: scale(1);}
 }
+
 header.on .mobile-btn>span{background: #fff;}
 .mobile-btn{_border: 1px solid red; display: none; width: 25px; height: 25px; float: right; cursor: pointer;}
 .mobile-btn span{display: block; width: 100%; height: 3px; background: #777; }
 .mobile-btn span:nth-child(2){margin: 7px 0;}
 
-header.on{background: #1b242f;  box-shadow: 1px 1px 10px 1px #000;}
+header.on{background: #1b242f; padding: 10px 0; border-bottom: transparent; box-shadow: 1px 1px 10px 1px #000;}
+
+
 header.on li a{color: #fff;}
 header.on .gnb > span{position:absolute; width:100%; height:2px; background:#fff; left:0; bottom:0;}
+.menu.on{background: transparent; _margin: 10px 0;}
 
 .go-contact a{background: #3f60fa; color: #fff !important;}
 
@@ -104,7 +115,7 @@ header.on .gnb > span{position:absolute; width:100%; height:2px; background:#fff
 .view-all-bg{background: rgb(221, 221, 221);}
 
 
-.works-page{overflow-x: hidden; height: auto; margin-top: 0px; background: #eee; padding-bottom: 50px;}
+.works-page{_overflow-x: hidden; height: auto; margin-top: 0px; background: #eee; padding-bottom: 50px;}
 .slide-wrap .pages{display: flex; align-items: center; box-sizing: border-box; box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.623); padding: 50px; width: 100%; height: 100%; background: #fff;}
 .pages .page-img{width: 65%; height: 100%; overflow: hidden;}
 .pages .page-img img{width: 100%; display: flex;} 
@@ -141,12 +152,12 @@ header.on .gnb > span{position:absolute; width:100%; height:2px; background:#fff
 
 
 /* 슬라이드 좌우 이동버튼 */
-.swiper-button-next i{transition: all .3s; color: #777; padding: 20px 30px; text-align: center; font-size: 40px;}
+.swiper-button-next i{transition: all .3s; color: #777;  text-align: center; font-size: 40px;}
 .swiper-button-next{outline: none;}
 .swiper-button-next:hover i{transform: scale(1.5); color: #555; }
 
 
-.swiper-button-prev i{transition: all .3s; color: #777; padding: 20px 30px; text-align: center; font-size: 40px;}
+.swiper-button-prev i{transition: all .3s; color: #777;  text-align: center; font-size: 40px;}
 .swiper-button-prev{outline: none;}
 .swiper-button-prev:hover i{transform: scale(1.5); color: #555;}
 
@@ -182,7 +193,7 @@ header.on .gnb > span{position:absolute; width:100%; height:2px; background:#fff
 
 /* 카테고리 나누기 */
 .button-group{margin-bottom: 20px; width: 100%; text-align: center;}
-.button-group button{margin: auto; background: transparent; border: none; color: #eee; font-size: 20px; outline: none; padding: 10px 20px; margin: 10px 10px;}
+.button-group button{margin: auto; background: transparent; border: none; color: #eee; font-size: 20px; outline: none; width: 150px; padding: 7px 0; margin: 5px 5px;}
 .button-group button.active{background: #3f60fa; color: #fff; animation-name: btn-active; animation-duration: .3s;}
 @keyframes btn-active{
   0% {
@@ -235,7 +246,7 @@ header.on .gnb > span{position:absolute; width:100%; height:2px; background:#fff
 
 /* project-page */
 
-.project-page{background: #eee; padding-bottom: 50px; padding: 0 70px;}
+.project-page{background: #eee; padding-bottom: 50px; padding: 0 70px 70px 70px;}
 
 .project-wrap{padding-top: 30px; position: relative; display: flex; align-items: center; max-width: 1200px; width:100%; margin: auto;  height: auto; box-sizing: border-box;}
 
@@ -265,15 +276,16 @@ header.on .gnb > span{position:absolute; width:100%; height:2px; background:#fff
 .about-page{background: #fff; overflow: auto; padding: 0 70px;}
 
 .about-page .info-box{width: 100%; max-width: 1200px; _border: 1px solid #eee; position: relative; margin: auto; height: auto; margin-top: 40px; background: #fff;}
-.about-page .info-box .about-info{width: 100%; height: 100%; display: flex; justify-content: space-between; box-sizing: border-box; padding-top: 20px;}
-
+.about-page .info-box .about-info{width: 100%; height: 100%;  box-sizing: border-box; padding-top: 20px; display: flex;}
+.about-wrap{display: flex; _border: 1px solid red; float: left; width: 60%;}
 /* about-topTxt */
+
 .about-topTxt{ margin-bottom: 80px;}
 .about-topTxt p{font-size: 25px; font-weight: 500; color: #555;}
-.about-topTxt b{font-size: 50px; color: #3f60fa; text-shadow: 2px 1px 1px #ccc;}
+.about-topTxt b{font-size: 50px; color: #3f60fa; text-shadow: 2px 1px 1px #ccc; font-family: sans-serif;}
 
 /* about face */
-.about-face{width: 20%; _border: 1px solid #eee;}
+.about-face{width: 35%; _border: 1px solid #eee;}
 .about-face .face-img{width: 100%; margin-left: 5px; position: relative; display: table;}
 .face-img:before{content: ''; position: absolute; width: 100%; height: 100%; box-sizing: border-box; top: -5px; right: 8px; border: 3px solid #3f60fa;;}
 .face-img img{width: 100%;  display: block;}
@@ -286,8 +298,9 @@ header.on .gnb > span{position:absolute; width:100%; height:2px; background:#fff
 
 
 /* about info txt */
-.about-info .about-txt{color: #777; box-sizing: border-box;  width: 40%; _border: 1px solid #eee;}
+.about-info .about-txt{color: #777; box-sizing: border-box; margin-left: 5%; padding-right: 20px; width: 60%; _border: 1px solid #eee;}
 .about-info .about-txt p{font-size: 15px;}
+.about-info .about-txt>p{font-size: 16px;}
 
 
 .Ed-title{margin-bottom: 50px; display: table; padding-left: 20px; width: auto; border-left: 7px solid #aaa;}
@@ -313,15 +326,14 @@ header.on .gnb > span{position:absolute; width:100%; height:2px; background:#fff
 
 /* contact-page */
 
-.contact-page{background: #1b242f; width: 100%; overflow: hidden; position: relative;}
+.contact-page{background: #1b242f; width: 100%; height: auto; overflow: hidden; position: relative; padding-bottom: 80px;}
 
 
-.contac-txt{padding: 40px 0; text-align: center; font-size: 15px; color: #eee; }
+.contac-txt{padding: 40px 10px; text-align: center; font-size: 15px; color: #eee; }
 .contac-txt i{padding-top: 20px;}
 
-.contact-wrap{width: 100%; margin: auto; margin-top: 50px; display: flex; position: relative; _box-shadow: 1px 1px 5px 1px rgb(185, 185, 185); _background: #fff;}
-
-.contact-page form{width: 100%; display: block;  box-sizing:border-box; padding:0 10px; }
+.contact-wrap{width: 100%; margin: auto; margin-top: 50px; display: flex; flex-direction: row-reverse; position: relative; padding: 0 40px;}
+.contact-page form{width: 100%; display: block;  box-sizing:border-box; padding:0 10px;}
 
 @keyframes contac {
   0%{opacity: 0; transform:  translate(300px, -300px);}
@@ -329,9 +341,11 @@ header.on .gnb > span{position:absolute; width:100%; height:2px; background:#fff
   100%{transform:  translateX(0);}
 }
 
+.side-contact{width: 50%; overflow: hidden;}
+
 .contact-box{animation-name: contac; animation-duration: 0.8s; width: 50%;}
 
-form ul li.half{width: 49%; float: left;}
+
 form ul li{position: relative; padding: 0; margin: 0; list-style: none; margin-bottom: 10px; overflow: hidden; display: block;}
 
 .input-label:before{content: ''; position: absolute;  bottom: 0;  left: 0;  width: 100%;  height: 1px;}
