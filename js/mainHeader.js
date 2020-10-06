@@ -3,7 +3,9 @@ $(document).ready(function(){
     var activateNav = function () {
 
         $(".gnb li").click(function () {
-         
+          $(".gnb").removeClass("on");
+            $(".menu-bg").removeClass("on");
+
           var liWidth = $(this).width();
           var liLeft = $(this).position().left;
           var liIndex = $(this).index();
@@ -20,7 +22,7 @@ $(document).ready(function(){
           // pagePos 뒤의 + 숫자가 이동 마진 값을 정함
         });
     
-        // $(".gnb li").eq(0).trigger("click");
+        $(".gnb li").eq(0).trigger("click");
       }
     
       activateNav();
@@ -56,7 +58,14 @@ $(document).ready(function(){
         });
       }
     
-      activateHeader();
-    
+      activateHeader();  
+
+      $(window).resize(function(){
+        winWidth = $(window).width();
+        if(winWidth > 859){
+          var scroll = $(window).scrollTop();
+          $("html,body").animate({scrollTop:scroll + 1}, 1);
+        }
+      });
 
 })
