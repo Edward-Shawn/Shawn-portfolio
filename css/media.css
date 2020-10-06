@@ -1,5 +1,5 @@
-@media screen and (max-width: 1280px){
-    
+@media screen and (max-width: 1540px){
+    .home-page-bg img{height: 100%; width: auto;}
 }
 
 
@@ -14,7 +14,7 @@
     .center-txt h1{font-size: 50px; }
     .center-txt b{font-size: 100px;}
     .center-txt b{font-size: 80px; margin-top: -20px; display: inline-block;}
-    .center-txt em{float: unset;}
+    .center-txt em{float: none;}
 
     .pjImg-01{display: none;}
     .pjImg-02{display: block;}
@@ -28,7 +28,7 @@
     .about-face{width: 25%; float: left;}
     
     .about-page .info-box .about-info{display: block;}
-    .about-wrap{display: block; float: unset; margin: auto; width: 100%; padding: 5px; overflow: hidden;}
+    .about-wrap{display: block; float: none; margin: auto; width: 100%; padding: 5px; overflow: hidden;}
     
 
     .Ed-title{margin-top: 50px; clear: both;}
@@ -52,8 +52,7 @@
     .pj-conBox{width: 100%; box-shadow: 1px 1px 7px #555;}
 
 
-    .pj-move-btn{right: 0; top: -40px; transform: unset;}
-    .pj-content .lan{display: flex;}
+    
 }
 
 
@@ -70,7 +69,7 @@
     .pages .page-txt h1{display: inline-block; margin-bottom: 0;}
     .pages .page-img{margin: auto;}
     .pages .page-txt{padding-left: 0; width: 100%; text-align: center;}
-    .lan{display: unset; text-align: center;}
+    .lan{text-align: center;}
     .lan span{display: inline-block;}
 
     .view-link{margin-top: 20px;}
@@ -89,7 +88,7 @@
 
     .contact-page form input{font-size: 15px;}
     textarea{font-size: 15px;}
-    .submit-button{float: unset; margin: auto; display: block;}
+    .submit-button{float: none; margin: auto; display: block;}
 
     .call-numbers a{margin-top: 10px;}
     .call-numbers p{margin-top: 17px;}
@@ -234,8 +233,8 @@
     .Ed-title p{font-size: 13px;}
 
    
-    .about-face{float: unset; margin: auto; width: 190px;}
-    .about-info .about-txt{float: unset; text-align: center; margin-top: 20px; width: 100%; margin-left: 0;}
+    .about-face{float: none; margin: auto; width: 140px;}
+    .about-info .about-txt{float: none; text-align: center; margin-top: 20px; width: 100%; margin-left: 0;}
     .about-face .about-name{text-align: center;}
     .about-name h1{font-size: 30px;}
     .about-name p{font-size: 15px;}
@@ -245,7 +244,7 @@
     .about-topTxt p{font-size: 15px;}
     
     .sk-title{font-size: 28px;}
-    .skill-box{float: unset; width: 100%; margin-bottom: 0;}
+    .skill-box{float: none; width: 100%; margin-bottom: 0;}
     .skill-box:nth-child(1){margin-right: 0;}
     
     .pages-bg-wrap{width: 90%;}
@@ -253,6 +252,7 @@
     .swiper-button-next{display: none;}
 
     .view-all{padding: 0 20px;}
+    
 }
 
 
@@ -286,6 +286,8 @@
     .button-group button{width: 100px; font-size: 14px;}
 
     .slide-wrap.all .page-box .page{height: 260px;}
+
+
 
 }
 

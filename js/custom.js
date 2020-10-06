@@ -46,7 +46,7 @@ $(document).ready(function(){
     })
 
 
-    // $(".click").eq(0).trigger("click");
+    
 
 
     $(".mobile-btn").click(function(){
