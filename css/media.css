@@ -1,6 +1,8 @@
 @media screen and (max-width: 980px){
     .home-page{background: none;}
     .home-page-bg img{height: 100%; width: auto;}
+
+    .pages .page-txt p{display: block; margin: 10px auto 20px;}
 }
 
 
@@ -50,11 +52,11 @@
 
     .project-page .works-background{height: 100%;}
     .project-wrap{display: block;}
-    .pj-img{width: 90%; margin-left: 0; margin: auto;}
+    .pj-img{width: 90%;  margin: auto;}
     .pj-img .img-box{height: 350px;}
     .pj-conBox{width: 100%; box-shadow: 1px 1px 7px #555;}
 
-
+    .project-wrap.second .pj-img{ margin: auto !important;}
     
 }
 
@@ -77,8 +79,9 @@
 
     .view-link{margin-top: 20px;}
     .pages .page-txt.pc{width: 100%;}
-
-    
+    .pj-info-wrap{text-align: center;}
+    .pj-info-txt{padding-top: 75px;}
+    .pj-content p{padding-right: 0;}
 
 }
 @media screen and (max-width: 870px){
@@ -100,7 +103,7 @@
 
     .call-numbers{animation-name: callnum2; animation-delay: 0.2s;}
     .contact-box{animation-name: contac2; animation-delay: 0.2;}
-
+    .wp-info-txt{margin-bottom: 40px;}
 }
 
 
@@ -180,7 +183,11 @@
 
     .page-img.mobile img{height: 310px;}
 }
+@media screen and (max-width: 680px){
+    .center .page-title{float: none;}
+    .pj-info-txt{margin-left: 0; float: none; text-align: center; padding-top: 20px;}
 
+}
 
 
 @media screen and (max-width: 650px){
