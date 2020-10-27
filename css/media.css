@@ -135,7 +135,7 @@
 
     .about-topTxt b{font-size: 35px;}
     .about-topTxt p{font-size: 20px;}
-
+    #loader .logo{display: block !important;}
 }
 
 @media screen and (max-width: 800px){
@@ -315,4 +315,3 @@
     
     .view-all{padding: 0 5px;}
 }
-
