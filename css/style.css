@@ -5,6 +5,7 @@
 ul, ol{list-style: none;}
 a{text-decoration: none;}
 .center{overflow: hidden; max-width: 1200px; width: 100%; margin: auto;}
+.page-info{margin-top: 20px !important; margin-bottom: 10px !important;}
 .type-of{max-width: 150px; border: 2px solid #aaa; display: inline-block; padding: 2px 10px; font-weight: 600;}
 
 body{padding-top: 1px;}
@@ -89,6 +90,10 @@ header.on .gnb > span{position:absolute; width:100%; height:2px; background:#fff
 
 .center-txt{position: absolute; top: 45%; left: 50%; text-align: center; transform: translate(-50%, -50%);}
 .center-txt h1{font-size: 70px; color: #555; font-weight: 400;}
+
+.loaded .center-txt h1{visibility: visible;  animation-duration: .8s; animation-delay: 0.4s; animation-name: zoomInRight;}
+
+
 .center-txt b{text-shadow: 5px 3px 1px #ccc; top: 5px; font-size: 120px; position: relative; font-weight: bold; color: #3f60fa;}
 .center-txt em{ color: #777; font-size: 15px; font-weight: 500; float: right; font-style: normal;}
 
@@ -174,8 +179,8 @@ header.on .gnb > span{position:absolute; width:100%; height:2px; background:#fff
 
 .view-link.works{width: 100%;}
 
-.lan{display: flex; margin-bottom: 20px;}
-.lan span{margin-right: 10px; font-size: 14px; border-radius: 5px; font-weight: bold; background: #555; color: #fff; padding:3px 10px; display: block;}
+.lan{overflow: hidden; margin-bottom: 20px;}
+.lan span{float: left; margin-top: 5px; margin-right: 10px; font-size: 14px; border-radius: 5px; font-weight: bold; background: #555; color: #fff; padding:3px 10px; display: block;}
 
 
 
@@ -349,6 +354,13 @@ header.on .gnb > span{position:absolute; width:100%; height:2px; background:#fff
 .Ed-title{margin-bottom: 50px; display: table; padding-left: 20px; width: auto; border-left: 7px solid #aaa;}
 .Ed-title h1{margin-bottom: 20px; font-size: 30px; color: #555;}
 .Ed-title p{margin-bottom: 10px; font-size: 14px; color: #777;}
+
+
+/* git */
+
+.git-img{height: 30px;  display: inline-block; float: right;}
+.git-img:hover img{opacity: 1; transform: scale(1.1);}
+.git-img img{height: 100%; transition: all .4s; opacity: 0.7;}
 
 
 /* about skills-info */

@@ -29,7 +29,7 @@
 @media screen and (max-width: 1100px){
     .slide-wrap.all .page-box .page{width: 50%;}
     .pages .page-img{width: auto;}
-    .about-info .about-txt{padding-right: 0; width: auto; float: left;}
+    .about-info .about-txt{padding-right: 0; float: left;}
     .about-face{width: 25%; float: left;}
     
     .about-page .info-box .about-info{display: block;}
@@ -43,7 +43,8 @@
     .ed-p1{margin-right: 20px;}
 
     .sk-title{_text-align: center; font-weight: 500; font-size: 35px;}
-    .skills-info{width: 100%;}
+    
+    .skills-info{width: 100%; clear: both;}
 
     .pj-content p{padding-right: 15%;}
 
@@ -75,13 +76,16 @@
     .pages .page-img{margin: auto;}
     .pages .page-txt{padding-left: 0; width: 100%; text-align: center;}
     .lan{text-align: center; display: block;}
-    .lan span{display: inline-block;}
+    .lan span{display: inline-block; float: none;}
+    
 
     .view-link{margin-top: 20px;}
     .pages .page-txt.pc{width: 100%;}
     .pj-info-wrap{text-align: center;}
     .pj-info-txt{padding-top: 75px;}
     .pj-content p{padding-right: 0;}
+
+
 
 }
 @media screen and (max-width: 870px){
@@ -151,6 +155,10 @@
 
     .about-info .about-txt{padding-left: 25px;}
     .page-img.mobile img{height: 380px;}
+   
+
+
+
 }
 
 @media screen and (max-width: 760px){
@@ -185,7 +193,7 @@
 }
 @media screen and (max-width: 680px){
     .center .page-title{float: none;}
-    .pj-info-txt{margin-left: 0; float: none; text-align: center; padding-top: 20px;}
+    .pj-info-txt{margin-left: 0; float: none; text-align: center; padding-top: 40px;}
 
 }
 
@@ -238,15 +246,19 @@
     .pages .page-img {width: 80%; margin-top: 10px;}
     .pages .page-txt b{font-size: 25px;}
     .pages .page-txt h1{font-size: 20px;}
-    .pages .page-txt p{margin-top: -5px; margin-bottom: 10px;}
+    .pages .page-txt p{margin-bottom: 10px;}
     .pages .page-txt .info-p{font-size: 13px;}
     .lan span{font-size: 12px; font-weight: 400;}
     .page-img.mobile img{height: 140px;}
+
+    
+    .git-img{height: 20px;}
 }
 
 @media screen and (max-width: 450px){
     .Ed-title h1{font-size: 20px;}
     .Ed-title p{font-size: 13px;}
+
 
    
     .about-face{float: none; margin: auto; width: 140px;}
@@ -278,7 +290,7 @@
     .contac-txt{font-size: 13px;}
 
     .pj-content h1:nth-child(1){margin-bottom: -5px;}
-    
+    .wp-info-txt{font-size: 14px;}
 }
 
 @media screen and (max-width: 400px){
@@ -287,6 +299,7 @@
     .Ed-title h1{padding-right: 0; font-size: 25px; margin-bottom: 20px;}
 
     .pj-content .view-link{width: 100%;}
+    .pj-info-txt{font-size: 15px;}
 }
 
 
@@ -303,8 +316,9 @@
 
     .slide-wrap.all .page-box .page{height: 260px;}
 
+    .page-info{font-size: 14px !important; margin-top: 10px !important;}
 
-
+    .wp-info-txt{font-size: 12px;}
 }
 
 @media screen and (max-width: 350px){
