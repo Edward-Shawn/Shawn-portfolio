@@ -156,8 +156,7 @@ $(document).ready(function(){
         
     $(window).on("load", function(){
         setTimeout(function(){
-        $("body").addClass("loaded");
-    },1500);
-        
+            $("body").addClass("loaded");
+        },1500);      
     });
    

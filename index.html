@@ -770,26 +770,27 @@
                 </div>
 
                 <div class="contact-box wow">
-                    <form id="contact" action="">
+                    <iframe name="hid_func" style="display:none"></iframe>
+                    <form id="contact" method="post" action="php/mailer.lib.php"  target="inform">
                         <ul>
                             <li>
                                 <input type="text" name="name" placeholder="Name">
-                                <label class="input-label"></label>
+                                <label for="name" class="input-label"></label>
                             </li>
         
                             <li>
                                 <input type="email" name="email" placeholder="email">
-                                <label class="input-label"></label>
+                                <label for="email" class="input-label"></label>
                             </li>
         
                             <li>
-                                <input type="text" name="name" placeholder="Subject">
-                                <label class="input-label"></label>
+                                <input type="text" name="title" placeholder="Subject">
+                                <label for="title" class="input-label"></label>
                             </li>
         
                             <li>
                                 <textarea type="text" name="message" placeholder="Your Message" style="overflow: hidden;"></textarea>
-                                <label class="input-label"></label>
+                                <label for="message" class="input-label"></label>
                             </li>
                         </ul>
         

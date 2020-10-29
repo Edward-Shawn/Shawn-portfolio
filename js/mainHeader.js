@@ -52,8 +52,6 @@ $(document).ready(function(){
               $(".gnb li").eq(i).removeClass("active");
             }
     
-           
-    
           }
         });
       }
