@@ -33,8 +33,6 @@ $(document).ready(function(){
         }
     })
 
-
-
     // 포폴 화면 전환시 백그라운드
     $(".click.one").click(function(){
         $(".works-background").css('height','50%');
